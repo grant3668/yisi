@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" font-family="PingFang SC, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9a86b"/>
+      <stop offset="100%" stop-color="#a87042"/>
+    </linearGradient>
+    <linearGradient id="woodLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c08a"/>
+      <stop offset="100%" stop-color="#c08855"/>
+    </linearGradient>
+    <linearGradient id="woodDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c6b3c"/>
+      <stop offset="100%" stop-color="#6e4a28"/>
+    </linearGradient>
+    <pattern id="grain" patternUnits="userSpaceOnUse" width="60" height="6">
+      <rect width="60" height="6" fill="url(#wood)"/>
+      <path d="M0 3 Q15 1 30 3 T60 3" stroke="#7a4d22" stroke-width="0.4" fill="none" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="760" fill="#fbf7ef"/>
+
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#3c2a18">小板凳 设计效果图</text>
+  <text x="500" y="62" text-anchor="middle" font-size="13" fill="#7a5a38">尺寸 44 × 28 × 38 cm （长 × 宽 × 高）</text>
+
+  <!-- ===== Isometric 3D view ===== -->
+  <g transform="translate(540,90)">
+    <text x="200" y="0" text-anchor="middle" font-size="14" font-weight="bold" fill="#3c2a18">立体效果</text>
+
+    <!-- Ground shadow -->
+    <ellipse cx="200" cy="320" rx="170" ry="14" fill="#000" opacity="0.12"/>
+
+    <!-- Back legs -->
+    <g>
+      <!-- Back left leg -->
+      <polygon points="80,140 96,132 96,310 80,318" fill="url(#woodDark)" stroke="#5a3c20" stroke-width="0.8"/>
+      <polygon points="96,132 108,138 108,316 96,310" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+      <!-- Back right leg -->
+      <polygon points="296,84 312,76 312,254 296,262" fill="url(#woodDark)" stroke="#5a3c20" stroke-width="0.8"/>
+      <polygon points="312,76 324,82 324,260 312,254" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    </g>
+
+    <!-- Back apron (long, far side) -->
+    <polygon points="108,138 296,84 296,108 108,162" fill="url(#woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+
+    <!-- Front legs -->
+    <g>
+      <!-- Front left leg -->
+      <polygon points="120,212 136,204 136,378 120,386" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+      <polygon points="136,204 148,210 148,384 136,378" fill="url(#woodLight)" stroke="#5a3c20" stroke-width="0.8"/>
+      <!-- Front right leg -->
+      <polygon points="336,156 352,148 352,322 336,330" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+      <polygon points="352,148 364,154 364,328 352,322" fill="url(#woodLight)" stroke="#5a3c20" stroke-width="0.8"/>
+    </g>
+
+    <!-- Front apron (long, near side) -->
+    <polygon points="148,210 336,156 336,180 148,234" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.6"/>
+
+    <!-- Short apron (left side, between back-left and front-left) -->
+    <polygon points="108,138 148,210 148,234 108,162" fill="url(#woodLight)" stroke="#5a3c20" stroke-width="0.6"/>
+
+    <!-- Seat board top - parallelogram -->
+    <polygon points="60,148 280,84 388,118 168,182" fill="url(#grain)" stroke="#5a3c20" stroke-width="1"/>
+    <!-- Seat board front edge (thickness) -->
+    <polygon points="60,148 168,182 168,194 60,160" fill="url(#woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+    <!-- Seat board right edge (thickness) -->
+    <polygon points="168,182 388,118 388,130 168,194" fill="url(#woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+
+    <!-- Annotations -->
+    <text x="40" y="155" font-size="11" fill="#5a3c20">凳面板</text>
+    <text x="40" y="170" font-size="10" fill="#7a5a38">28×44×1</text>
+
+    <text x="0" y="240" font-size="11" fill="#5a3c20">围裙</text>
+    <line x1="40" y1="235" x2="115" y2="200" stroke="#5a3c20" stroke-width="0.6"/>
+
+    <text x="0" y="300" font-size="11" fill="#5a3c20">腿 35 cm</text>
+    <line x1="50" y1="295" x2="88" y2="270" stroke="#5a3c20" stroke-width="0.6"/>
+  </g>
+
+  <!-- ===== Top view ===== -->
+  <g transform="translate(60,110)">
+    <text x="200" y="0" text-anchor="middle" font-size="14" font-weight="bold" fill="#3c2a18">俯视图 (Top)</text>
+    <!-- Board -->
+    <rect x="40" y="20" width="320" height="200" fill="url(#grain)" stroke="#5a3c20" stroke-width="1"/>
+    <!-- Wood grain lines on top -->
+    <g stroke="#7a4d22" stroke-width="0.4" opacity="0.4" fill="none">
+      <path d="M40 60 Q200 55 360 62"/>
+      <path d="M40 100 Q200 96 360 102"/>
+      <path d="M40 140 Q200 138 360 142"/>
+      <path d="M40 180 Q200 178 360 182"/>
+    </g>
+
+    <!-- Hidden apron (dashed) -->
+    <rect x="70" y="50" width="260" height="140" fill="none" stroke="#5a3c20" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.7"/>
+
+    <!-- Leg positions (dashed squares) -->
+    <g stroke="#5a3c20" stroke-width="0.8" stroke-dasharray="3,2" fill="none" opacity="0.7">
+      <rect x="70" y="50" width="30" height="22"/>
+      <rect x="300" y="50" width="30" height="22"/>
+      <rect x="70" y="168" width="30" height="22"/>
+      <rect x="300" y="168" width="30" height="22"/>
+    </g>
+
+    <!-- Dimensions -->
+    <g font-size="10" fill="#5a3c20">
+      <!-- Top dimension -->
+      <line x1="40" y1="10" x2="360" y2="10" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="360" y1="5" x2="360" y2="15" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="200" y="-2" text-anchor="middle">44 cm</text>
+
+      <!-- Right dimension -->
+      <line x1="375" y1="20" x2="375" y2="220" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="370" y1="20" x2="380" y2="20" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="370" y1="220" x2="380" y2="220" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="385" y="125">28</text>
+
+      <!-- Apron dim -->
+      <text x="200" y="125" text-anchor="middle" font-size="9" fill="#7a5a38">围裙框 36×20</text>
+    </g>
+
+    <!-- Label corners -->
+    <text x="78" y="65" font-size="8" fill="#5a3c20">腿</text>
+  </g>
+
+  <!-- ===== Front view ===== -->
+  <g transform="translate(60,420)">
+    <text x="200" y="0" text-anchor="middle" font-size="14" font-weight="bold" fill="#3c2a18">正视图 (Front)</text>
+
+    <!-- Seat -->
+    <rect x="40" y="30" width="320" height="10" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <!-- Apron -->
+    <rect x="70" y="40" width="260" height="30" fill="url(#woodLight)" stroke="#5a3c20" stroke-width="0.8"/>
+    <!-- Legs -->
+    <rect x="70" y="40" width="30" height="240" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="300" y="40" width="30" height="240" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+
+    <!-- Floor line -->
+    <line x1="20" y1="280" x2="380" y2="280" stroke="#5a3c20" stroke-width="0.6"/>
+
+    <!-- Dimensions -->
+    <g font-size="10" fill="#5a3c20">
+      <line x1="40" y1="20" x2="360" y2="20" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="40" y1="15" x2="40" y2="25" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="360" y1="15" x2="360" y2="25" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="200" y="13" text-anchor="middle">44 cm</text>
+
+      <line x1="395" y1="30" x2="395" y2="280" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="390" y1="30" x2="400" y2="30" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="390" y1="280" x2="400" y2="280" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="402" y="158">38</text>
+
+      <text x="50" y="55" font-size="9" fill="#7a5a38">板 1</text>
+      <text x="105" y="60" font-size="9" fill="#7a5a38">围裙 3 cm 厚</text>
+      <text x="35" y="170" font-size="9" fill="#7a5a38" transform="rotate(-90 35 170)">腿 35</text>
+    </g>
+  </g>
+
+  <!-- ===== Side view ===== -->
+  <g transform="translate(540,420)">
+    <text x="200" y="0" text-anchor="middle" font-size="14" font-weight="bold" fill="#3c2a18">侧视图 (Side)</text>
+
+    <!-- Seat -->
+    <rect x="100" y="30" width="200" height="10" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <!-- Apron -->
+    <rect x="130" y="40" width="140" height="30" fill="url(#woodLight)" stroke="#5a3c20" stroke-width="0.8"/>
+    <!-- Legs -->
+    <rect x="130" y="40" width="30" height="240" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="240" y="40" width="30" height="240" fill="url(#wood)" stroke="#5a3c20" stroke-width="0.8"/>
+
+    <!-- Floor line -->
+    <line x1="80" y1="280" x2="320" y2="280" stroke="#5a3c20" stroke-width="0.6"/>
+
+    <!-- Dimensions -->
+    <g font-size="10" fill="#5a3c20">
+      <line x1="100" y1="20" x2="300" y2="20" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="100" y1="15" x2="100" y2="25" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="300" y1="15" x2="300" y2="25" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="200" y="13" text-anchor="middle">28 cm</text>
+
+      <line x1="335" y1="30" x2="335" y2="280" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="330" y1="30" x2="340" y2="30" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="330" y1="280" x2="340" y2="280" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="342" y="158">38</text>
+
+      <text x="170" y="60" font-size="9" fill="#7a5a38">短围裙 20</text>
+    </g>
+  </g>
+
+  <!-- Legend / cut list -->
+  <g transform="translate(60,720)" font-size="11" fill="#3c2a18">
+    <text x="0" y="0" font-weight="bold">下料：</text>
+    <text x="50" y="0">4×腿 35cm（取自 75/74）</text>
+    <text x="240" y="0">·</text>
+    <text x="255" y="0">2×长围裙 36cm（取自 63/63）</text>
+    <text x="490" y="0">·</text>
+    <text x="505" y="0">2×短围裙 20cm（取自 33/35）</text>
+    <text x="755" y="0">·</text>
+    <text x="770" y="0">凳面 28×44 原板</text>
+  </g>
+</svg>

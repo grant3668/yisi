@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" font-family="PingFang SC, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="a_wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9a86b"/>
+      <stop offset="100%" stop-color="#a87042"/>
+    </linearGradient>
+    <linearGradient id="a_woodLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c08a"/>
+      <stop offset="100%" stop-color="#c08855"/>
+    </linearGradient>
+    <linearGradient id="a_woodDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c6b3c"/>
+      <stop offset="100%" stop-color="#6e4a28"/>
+    </linearGradient>
+    <linearGradient id="a_board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c08a"/>
+      <stop offset="100%" stop-color="#c08855"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#c4392e"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="900" fill="#fbf7ef"/>
+  <text x="500" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#3c2a18">Ch.5  组装步骤</text>
+  <text x="500" y="58" text-anchor="middle" font-size="12" fill="#7a5a38">每一步都遵循：涂胶 → 预钻 3mm 孔 → 拧螺丝 → 角尺检查</text>
+
+  <!-- ===== Step 1: cut & sand ===== -->
+  <g transform="translate(40,90)">
+    <circle cx="0" cy="0" r="14" fill="#c4392e"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-weight="bold" font-size="14">1</text>
+    <text x="22" y="6" font-size="15" font-weight="bold" fill="#3c2a18">下料 & 找平</text>
+    <text x="22" y="24" font-size="11" fill="#7a5a38">按 Ch.3 切出 4 腿 + 4 围裙，4 条腿叠齐砂平到等长 35 cm</text>
+
+    <!-- 4 legs stacked -->
+    <g transform="translate(30,40)">
+      <rect x="0" y="0" width="200" height="8" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.5"/>
+      <rect x="0" y="10" width="200" height="8" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.5"/>
+      <rect x="0" y="20" width="200" height="8" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.5"/>
+      <rect x="0" y="30" width="200" height="8" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="100" y="55" text-anchor="middle" font-size="10" fill="#5a3c20">4 条腿叠在一起砂端面</text>
+    </g>
+  </g>
+
+  <!-- ===== Step 2: build apron frame ===== -->
+  <g transform="translate(40,200)">
+    <circle cx="0" cy="0" r="14" fill="#c4392e"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-weight="bold" font-size="14">2</text>
+    <text x="22" y="6" font-size="15" font-weight="bold" fill="#3c2a18">拼围裙框（俯视）</text>
+    <text x="22" y="24" font-size="11" fill="#7a5a38">G/H 短围裙嵌在 E/F 长围裙之间，胶 + 螺丝① 固定，角尺确认 90°</text>
+
+    <g transform="translate(180,50)">
+      <!-- Long apron E -->
+      <rect x="0" y="0" width="240" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+      <text x="120" y="14" text-anchor="middle" font-size="10" fill="#fff">E 长围裙 36</text>
+      <!-- Long apron F -->
+      <rect x="0" y="120" width="240" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+      <text x="120" y="134" text-anchor="middle" font-size="10" fill="#fff">F 长围裙 36</text>
+      <!-- Short apron G -->
+      <rect x="0" y="20" width="20" height="100" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.8"/>
+      <text x="10" y="75" text-anchor="middle" font-size="10" fill="#fff" transform="rotate(-90 10 75)">G 20</text>
+      <!-- Short apron H -->
+      <rect x="220" y="20" width="20" height="100" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.8"/>
+      <text x="230" y="75" text-anchor="middle" font-size="10" fill="#fff" transform="rotate(-90 230 75)">H 20</text>
+
+      <!-- screw indicators -->
+      <g fill="#c4392e">
+        <circle cx="10" cy="10" r="3"/>
+        <circle cx="10" cy="130" r="3"/>
+        <circle cx="230" cy="10" r="3"/>
+        <circle cx="230" cy="130" r="3"/>
+      </g>
+      <text x="120" y="160" text-anchor="middle" font-size="10" fill="#7a5a38">框内尺寸 36 × 20 cm</text>
+    </g>
+  </g>
+
+  <!-- ===== Step 3: attach legs ===== -->
+  <g transform="translate(40,400)">
+    <circle cx="0" cy="0" r="14" fill="#c4392e"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-weight="bold" font-size="14">3</text>
+    <text x="22" y="6" font-size="15" font-weight="bold" fill="#3c2a18">装腿（立体视图）</text>
+    <text x="22" y="24" font-size="11" fill="#7a5a38">4 条腿贴在围裙内 4 角，顶端与围裙顶面齐平，每条腿 2 颗 50mm 螺丝</text>
+
+    <g transform="translate(220,40)">
+      <!-- Iso view of frame + 4 legs -->
+      <!-- back top edge -->
+      <polygon points="20,20 240,-40 240,-20 20,40" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+      <!-- front top edge -->
+      <polygon points="60,80 280,20 280,40 60,100" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+      <!-- left side -->
+      <polygon points="20,20 60,80 60,100 20,40" fill="url(#a_woodLight)" stroke="#5a3c20" stroke-width="0.6"/>
+      <!-- right side -->
+      <polygon points="240,-40 280,20 280,40 240,-20" fill="url(#a_woodLight)" stroke="#5a3c20" stroke-width="0.6"/>
+
+      <!-- Legs (4) -->
+      <polygon points="20,40 28,36 28,170 20,174" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+      <polygon points="240,-20 248,-24 248,110 240,114" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+      <polygon points="60,100 68,96 68,230 60,234" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+      <polygon points="280,40 288,36 288,170 280,174" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+
+      <!-- Screw indicators -->
+      <g fill="#c4392e">
+        <circle cx="100" cy="63" r="3"/>
+        <circle cx="180" cy="42" r="3"/>
+        <circle cx="100" cy="83" r="3"/>
+        <circle cx="180" cy="62" r="3"/>
+      </g>
+
+      <text x="150" y="260" text-anchor="middle" font-size="10" fill="#7a5a38">把框翻过来，腿插入内角再固定最方便</text>
+    </g>
+  </g>
+
+  <!-- ===== Step 4: attach seat board ===== -->
+  <g transform="translate(540,400)">
+    <circle cx="0" cy="0" r="14" fill="#c4392e"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-weight="bold" font-size="14">4</text>
+    <text x="22" y="6" font-size="15" font-weight="bold" fill="#3c2a18">装凳面板</text>
+    <text x="22" y="24" font-size="11" fill="#7a5a38">板四边各悬出 4 cm，从围裙顶面向上打 8 颗 30mm 螺丝</text>
+
+    <g transform="translate(60,50)">
+      <!-- Exploded view: board floating above frame -->
+      <!-- board (top) -->
+      <polygon points="0,0 320,-60 380,-40 60,20" fill="url(#a_board)" stroke="#5a3c20" stroke-width="0.8"/>
+      <polygon points="0,0 60,20 60,32 0,12" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+      <polygon points="60,20 380,-40 380,-28 60,32" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+
+      <!-- Arrow pointing down -->
+      <line x1="190" y1="50" x2="190" y2="100" stroke="#c4392e" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- Frame below (smaller, inset) -->
+      <g transform="translate(40,130)">
+        <polygon points="0,0 240,-44 240,-30 0,14" fill="url(#a_woodDark)" stroke="#5a3c20" stroke-width="0.6"/>
+        <polygon points="30,30 270,-14 270,0 30,44" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+        <polygon points="0,0 30,30 30,44 0,14" fill="url(#a_woodLight)" stroke="#5a3c20" stroke-width="0.6"/>
+
+        <!-- screws shown -->
+        <g fill="#c4392e">
+          <circle cx="60" cy="-10" r="3"/>
+          <circle cx="120" cy="-22" r="3"/>
+          <circle cx="180" cy="-34" r="3"/>
+          <circle cx="80" cy="20" r="3"/>
+          <circle cx="140" cy="8" r="3"/>
+          <circle cx="200" cy="-4" r="3"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== Step 5: finish ===== -->
+  <g transform="translate(40,720)">
+    <circle cx="0" cy="0" r="14" fill="#c4392e"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-weight="bold" font-size="14">5</text>
+    <text x="22" y="6" font-size="15" font-weight="bold" fill="#3c2a18">检查 → 打磨 → 上油</text>
+    <text x="22" y="24" font-size="11" fill="#7a5a38">站平地检查是否四脚平稳；80→120→240 目逐级砂光；木蜡油 2 遍</text>
+
+    <g transform="translate(220,40)" font-size="11" fill="#5a3c20">
+      <rect x="0" y="0" width="120" height="60" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.5" rx="3"/>
+      <text x="60" y="35" text-anchor="middle" fill="#fff">检查</text>
+
+      <rect x="160" y="0" width="120" height="60" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.5" rx="3"/>
+      <text x="220" y="35" text-anchor="middle" fill="#fff">打磨</text>
+
+      <rect x="320" y="0" width="120" height="60" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.5" rx="3"/>
+      <text x="380" y="35" text-anchor="middle" fill="#fff">上油</text>
+
+      <line x1="120" y1="30" x2="160" y2="30" stroke="#c4392e" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="280" y1="30" x2="320" y2="30" stroke="#c4392e" stroke-width="2" marker-end="url(#arr)"/>
+    </g>
+  </g>
+
+  <!-- ===== Summary tip ===== -->
+  <g transform="translate(40,830)">
+    <rect x="0" y="0" width="920" height="50" fill="#fff7e6" stroke="#a87042" stroke-width="0.8" rx="6"/>
+    <text x="20" y="22" font-size="13" font-weight="bold" fill="#3c2a18">关键提示</text>
+    <text x="20" y="40" font-size="11" fill="#5a3c20">·  每个接合面先涂胶再上螺丝；3 mm 钻头先预钻孔以免木条开裂；4 条腿必须等长，否则会晃。</text>
+  </g>
+</svg>

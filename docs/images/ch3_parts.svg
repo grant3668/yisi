@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" font-family="PingFang SC, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="p_wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9a86b"/>
+      <stop offset="100%" stop-color="#a87042"/>
+    </linearGradient>
+    <linearGradient id="p_keep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8d8a0"/>
+      <stop offset="100%" stop-color="#5fa658"/>
+    </linearGradient>
+    <linearGradient id="p_scrap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#a8a8a8"/>
+    </linearGradient>
+    <linearGradient id="p_board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c08a"/>
+      <stop offset="100%" stop-color="#c08855"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="980" height="720" fill="#fbf7ef"/>
+  <text x="490" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#3c2a18">Ch.3  零件下料图</text>
+  <text x="490" y="58" text-anchor="middle" font-size="12" fill="#7a5a38">绿色 = 保留作零件　灰色 = 锯掉的废料　比例 1 cm = 8 px</text>
+
+  <!-- Legend -->
+  <g transform="translate(740,80)" font-size="11" fill="#3c2a18">
+    <rect x="0" y="0" width="14" height="14" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.5"/>
+    <text x="20" y="11">零件</text>
+    <rect x="60" y="0" width="14" height="14" fill="url(#p_scrap)" stroke="#3c2a18" stroke-width="0.5"/>
+    <text x="80" y="11">废料</text>
+    <line x1="120" y1="7" x2="140" y2="7" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="146" y="11">锯切线</text>
+  </g>
+
+  <!-- Strip 1: 75cm -> 35 + 35 + 5 (scrap) -->
+  <g transform="translate(60,100)">
+    <text x="-30" y="14" font-size="13" fill="#3c2a18">①</text>
+    <text x="-30" y="30" font-size="10" fill="#7a5a38">75 cm</text>
+    <rect x="0" y="0" width="280" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="280" y="0" width="280" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="560" y="0" width="40" height="22" fill="url(#p_scrap)" stroke="#3c2a18" stroke-width="0.6"/>
+    <line x1="280" y1="-4" x2="280" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <line x1="560" y1="-4" x2="560" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="140" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">腿 A (35)</text>
+    <text x="420" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">腿 B (35)</text>
+    <text x="580" y="14" text-anchor="middle" font-size="10" fill="#5a3c20">5</text>
+  </g>
+
+  <!-- Strip 2: 74cm -> 35 + 35 + 4 -->
+  <g transform="translate(60,160)">
+    <text x="-30" y="14" font-size="13" fill="#3c2a18">②</text>
+    <text x="-30" y="30" font-size="10" fill="#7a5a38">74 cm</text>
+    <rect x="0" y="0" width="280" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="280" y="0" width="280" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="560" y="0" width="32" height="22" fill="url(#p_scrap)" stroke="#3c2a18" stroke-width="0.6"/>
+    <line x1="280" y1="-4" x2="280" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <line x1="560" y1="-4" x2="560" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="140" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">腿 C (35)</text>
+    <text x="420" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">腿 D (35)</text>
+    <text x="576" y="14" text-anchor="middle" font-size="10" fill="#5a3c20">4</text>
+  </g>
+
+  <!-- Strip 3: 63cm -> 36 + 27 (scrap or stretcher) -->
+  <g transform="translate(60,220)">
+    <text x="-30" y="14" font-size="13" fill="#3c2a18">③</text>
+    <text x="-30" y="30" font-size="10" fill="#7a5a38">63 cm</text>
+    <rect x="0" y="0" width="288" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="288" y="0" width="216" height="22" fill="url(#p_scrap)" stroke="#3c2a18" stroke-width="0.6"/>
+    <line x1="288" y1="-4" x2="288" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="144" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">长围裙 E (36)</text>
+    <text x="396" y="14" text-anchor="middle" font-size="10" fill="#5a3c20">余 27 cm（备用）</text>
+  </g>
+
+  <!-- Strip 4: 63cm -> 36 + 27 -->
+  <g transform="translate(60,280)">
+    <text x="-30" y="14" font-size="13" fill="#3c2a18">④</text>
+    <text x="-30" y="30" font-size="10" fill="#7a5a38">63 cm</text>
+    <rect x="0" y="0" width="288" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="288" y="0" width="216" height="22" fill="url(#p_scrap)" stroke="#3c2a18" stroke-width="0.6"/>
+    <line x1="288" y1="-4" x2="288" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="144" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">长围裙 F (36)</text>
+    <text x="396" y="14" text-anchor="middle" font-size="10" fill="#5a3c20">余 27 cm（备用）</text>
+  </g>
+
+  <!-- Strip 5: 33 -> 20 + 13 -->
+  <g transform="translate(60,340)">
+    <text x="-30" y="14" font-size="13" fill="#3c2a18">⑤</text>
+    <text x="-30" y="30" font-size="10" fill="#7a5a38">33 cm</text>
+    <rect x="0" y="0" width="160" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="160" y="0" width="104" height="22" fill="url(#p_scrap)" stroke="#3c2a18" stroke-width="0.6"/>
+    <line x1="160" y1="-4" x2="160" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="80" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">短围裙 G (20)</text>
+    <text x="212" y="14" text-anchor="middle" font-size="10" fill="#5a3c20">余 13</text>
+  </g>
+
+  <!-- Strip 6: 35 -> 20 + 15 -->
+  <g transform="translate(60,400)">
+    <text x="-30" y="14" font-size="13" fill="#3c2a18">⑥</text>
+    <text x="-30" y="30" font-size="10" fill="#7a5a38">35 cm</text>
+    <rect x="0" y="0" width="160" height="22" fill="url(#p_keep)" stroke="#3c2a18" stroke-width="0.6"/>
+    <rect x="160" y="0" width="120" height="22" fill="url(#p_scrap)" stroke="#3c2a18" stroke-width="0.6"/>
+    <line x1="160" y1="-4" x2="160" y2="26" stroke="#c4392e" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="80" y="14" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">短围裙 H (20)</text>
+    <text x="220" y="14" text-anchor="middle" font-size="10" fill="#5a3c20">余 15</text>
+  </g>
+
+  <!-- Parts inventory ===== bottom ===== -->
+  <text x="490" y="475" text-anchor="middle" font-size="16" font-weight="bold" fill="#3c2a18">─── 切完后得到 9 个零件 ───</text>
+
+  <!-- 4 legs -->
+  <g transform="translate(60,500)" font-size="11" fill="#3c2a18">
+    <text x="0" y="0" font-weight="bold">4 × 腿 (A/B/C/D)</text>
+    <g>
+      <rect x="0" y="10" width="100" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+      <text x="50" y="24" text-anchor="middle" fill="#fff" font-size="10">A 35×4×3</text>
+
+      <rect x="115" y="10" width="100" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+      <text x="165" y="24" text-anchor="middle" fill="#fff" font-size="10">B 35×4×3</text>
+
+      <rect x="0" y="40" width="100" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+      <text x="50" y="54" text-anchor="middle" fill="#fff" font-size="10">C 35×4×3</text>
+
+      <rect x="115" y="40" width="100" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+      <text x="165" y="54" text-anchor="middle" fill="#fff" font-size="10">D 35×4×3</text>
+    </g>
+    <text x="0" y="80" font-size="10" fill="#7a5a38">每条 35 cm，用作 4 条腿</text>
+  </g>
+
+  <!-- 2 long aprons -->
+  <g transform="translate(290,500)" font-size="11" fill="#3c2a18">
+    <text x="0" y="0" font-weight="bold">2 × 长围裙 (E/F)</text>
+    <rect x="0" y="10" width="170" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+    <text x="85" y="24" text-anchor="middle" fill="#fff" font-size="10">E 36×4×3</text>
+    <rect x="0" y="40" width="170" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+    <text x="85" y="54" text-anchor="middle" fill="#fff" font-size="10">F 36×4×3</text>
+    <text x="0" y="80" font-size="10" fill="#7a5a38">每条 36 cm，长边围裙</text>
+  </g>
+
+  <!-- 2 short aprons -->
+  <g transform="translate(510,500)" font-size="11" fill="#3c2a18">
+    <text x="0" y="0" font-weight="bold">2 × 短围裙 (G/H)</text>
+    <rect x="0" y="10" width="100" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+    <text x="50" y="24" text-anchor="middle" fill="#fff" font-size="10">G 20×4×3</text>
+    <rect x="0" y="40" width="100" height="20" fill="url(#p_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+    <text x="50" y="54" text-anchor="middle" fill="#fff" font-size="10">H 20×4×3</text>
+    <text x="0" y="80" font-size="10" fill="#7a5a38">每条 20 cm，短边围裙</text>
+  </g>
+
+  <!-- 1 seat board -->
+  <g transform="translate(700,500)" font-size="11" fill="#3c2a18">
+    <text x="0" y="0" font-weight="bold">1 × 凳面板 (I)</text>
+    <rect x="0" y="10" width="170" height="100" fill="url(#p_board)" stroke="#5a3c20" stroke-width="0.6"/>
+    <g stroke="#7a4d22" stroke-width="0.3" opacity="0.4" fill="none">
+      <path d="M0 30 Q85 28 170 32"/>
+      <path d="M0 60 Q85 58 170 62"/>
+      <path d="M0 90 Q85 88 170 92"/>
+    </g>
+    <text x="85" y="65" text-anchor="middle" font-size="10" fill="#5a3c20">I 44×28×1</text>
+  </g>
+
+  <!-- Summary table -->
+  <g transform="translate(60,640)" font-size="11" fill="#3c2a18">
+    <text x="0" y="0" font-weight="bold">汇总：4 腿 + 2 长围裙 + 2 短围裙 + 1 凳面板 = 9 个零件</text>
+    <text x="0" y="20" fill="#7a5a38">总废料 ≈ 5+4+27×2+13+15 = 91 cm（其中两段 27 cm 可留作加固块或脚踏）</text>
+  </g>
+</svg>

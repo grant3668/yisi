@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="PingFang SC, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="m_wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9a86b"/>
+      <stop offset="100%" stop-color="#a87042"/>
+    </linearGradient>
+    <linearGradient id="m_woodEnd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c6b3c"/>
+      <stop offset="100%" stop-color="#6e4a28"/>
+    </linearGradient>
+    <linearGradient id="m_board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c08a"/>
+      <stop offset="100%" stop-color="#c08855"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="640" fill="#fbf7ef"/>
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#3c2a18">Ch.1  原材料清单</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#7a5a38">所有木条截面统一：宽 4 cm × 高 3 cm</text>
+
+  <!-- 6 strips, scale: 1 cm = 8 px. Max length 75cm = 600px. Strips drawn at 12px thick to show 3cm height -->
+  <!-- Each row: label + bar + length text -->
+
+  <g font-size="12" fill="#5a3c20">
+    <!-- Strip 1: 75 cm -->
+    <text x="40" y="115">①</text>
+    <rect x="70" y="100" width="600" height="20" fill="url(#m_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="670" y="100" width="8" height="20" fill="url(#m_woodEnd)" stroke="#5a3c20" stroke-width="0.8"/>
+    <line x1="70" y1="135" x2="678" y2="135" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="70" y1="130" x2="70" y2="140" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="678" y1="130" x2="678" y2="140" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="374" y="150" text-anchor="middle">75 cm</text>
+
+    <!-- Strip 2: 74 cm -->
+    <text x="40" y="180">②</text>
+    <rect x="70" y="165" width="592" height="20" fill="url(#m_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="662" y="165" width="8" height="20" fill="url(#m_woodEnd)" stroke="#5a3c20" stroke-width="0.8"/>
+    <line x1="70" y1="200" x2="670" y2="200" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="70" y1="195" x2="70" y2="205" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="670" y1="195" x2="670" y2="205" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="370" y="215" text-anchor="middle">74 cm</text>
+
+    <!-- Strip 3: 63 cm -->
+    <text x="40" y="245">③</text>
+    <rect x="70" y="230" width="504" height="20" fill="url(#m_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="574" y="230" width="8" height="20" fill="url(#m_woodEnd)" stroke="#5a3c20" stroke-width="0.8"/>
+    <line x1="70" y1="265" x2="582" y2="265" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="70" y1="260" x2="70" y2="270" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="582" y1="260" x2="582" y2="270" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="326" y="280" text-anchor="middle">63 cm</text>
+
+    <!-- Strip 4: 63 cm -->
+    <text x="40" y="310">④</text>
+    <rect x="70" y="295" width="504" height="20" fill="url(#m_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="574" y="295" width="8" height="20" fill="url(#m_woodEnd)" stroke="#5a3c20" stroke-width="0.8"/>
+    <line x1="70" y1="330" x2="582" y2="330" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="70" y1="325" x2="70" y2="335" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="582" y1="325" x2="582" y2="335" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="326" y="345" text-anchor="middle">63 cm</text>
+
+    <!-- Strip 5: 33 cm -->
+    <text x="40" y="375">⑤</text>
+    <rect x="70" y="360" width="264" height="20" fill="url(#m_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="334" y="360" width="8" height="20" fill="url(#m_woodEnd)" stroke="#5a3c20" stroke-width="0.8"/>
+    <line x1="70" y1="395" x2="342" y2="395" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="70" y1="390" x2="70" y2="400" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="342" y1="390" x2="342" y2="400" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="206" y="410" text-anchor="middle">33 cm</text>
+
+    <!-- Strip 6: 35 cm -->
+    <text x="40" y="440">⑥</text>
+    <rect x="70" y="425" width="280" height="20" fill="url(#m_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+    <rect x="350" y="425" width="8" height="20" fill="url(#m_woodEnd)" stroke="#5a3c20" stroke-width="0.8"/>
+    <line x1="70" y1="460" x2="358" y2="460" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="70" y1="455" x2="70" y2="465" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="358" y1="455" x2="358" y2="465" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="214" y="475" text-anchor="middle">35 cm</text>
+  </g>
+
+  <!-- Section title for board -->
+  <text x="40" y="515" font-size="14" font-weight="bold" fill="#3c2a18">⑦ 凳面板（厚 1 cm）</text>
+
+  <!-- Board top-down view: 44 cm x 28 cm; scale 1cm = 5px → 220 x 140 -->
+  <g transform="translate(80,525)">
+    <rect x="0" y="0" width="220" height="100" fill="url(#m_board)" stroke="#5a3c20" stroke-width="1"/>
+    <!-- grain -->
+    <g stroke="#7a4d22" stroke-width="0.4" opacity="0.4" fill="none">
+      <path d="M0 20 Q110 18 220 22"/>
+      <path d="M0 50 Q110 48 220 52"/>
+      <path d="M0 80 Q110 78 220 82"/>
+    </g>
+    <!-- dims -->
+    <line x1="0" y1="-10" x2="220" y2="-10" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="0" y1="-15" x2="0" y2="-5" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="220" y1="-15" x2="220" y2="-5" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="110" y="-15" text-anchor="middle" font-size="12" fill="#5a3c20">44 cm</text>
+
+    <line x1="232" y1="0" x2="232" y2="100" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="227" y1="0" x2="237" y2="0" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="227" y1="100" x2="237" y2="100" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="245" y="55" font-size="12" fill="#5a3c20">28 cm</text>
+  </g>
+
+  <!-- Cross-section illustration of a strip -->
+  <g transform="translate(560,510)">
+    <text x="0" y="-10" font-size="13" font-weight="bold" fill="#3c2a18">木条截面</text>
+    <rect x="0" y="0" width="80" height="60" fill="url(#m_woodEnd)" stroke="#5a3c20" stroke-width="1"/>
+    <line x1="0" y1="-10" x2="80" y2="-10" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="0" y1="-15" x2="0" y2="-5" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="80" y1="-15" x2="80" y2="-5" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="40" y="-18" text-anchor="middle" font-size="12" fill="#5a3c20">宽 4</text>
+
+    <line x1="90" y1="0" x2="90" y2="60" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="85" y1="0" x2="95" y2="0" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="85" y1="60" x2="95" y2="60" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="105" y="35" font-size="12" fill="#5a3c20">高 3</text>
+  </g>
+
+  <!-- Summary table corner -->
+  <g transform="translate(720,90)" font-size="12" fill="#3c2a18">
+    <rect x="0" y="0" width="150" height="190" fill="#fff7e6" stroke="#a87042" stroke-width="0.8" rx="6"/>
+    <text x="75" y="22" text-anchor="middle" font-weight="bold">材料汇总</text>
+    <line x1="10" y1="32" x2="140" y2="32" stroke="#a87042" stroke-width="0.5"/>
+    <text x="15" y="55">① 75 cm</text>
+    <text x="15" y="78">② 74 cm</text>
+    <text x="15" y="101">③ 63 cm</text>
+    <text x="15" y="124">④ 63 cm</text>
+    <text x="15" y="147">⑤ 33 cm</text>
+    <text x="15" y="170">⑥ 35 cm</text>
+    <text x="15" y="187" font-size="10" fill="#7a5a38">⑦ 28×44×1 板</text>
+  </g>
+</svg>
