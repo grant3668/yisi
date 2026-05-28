@@ -17,7 +17,7 @@
   </defs>
 
   <rect width="980" height="680" fill="#fbf7ef"/>
-  <text x="490" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#3c2a18">Ch.4  五金 & 辅料清单</text>
+  <text x="490" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#3c2a18">Ch.4  五金 &amp; 辅料清单</text>
   <text x="490" y="58" text-anchor="middle" font-size="12" fill="#7a5a38">所有螺丝都使用沉头自攻螺丝；预钻孔可避免木条开裂</text>
 
   <!-- Screw type 1: 4 × 50 mm for leg → apron -->

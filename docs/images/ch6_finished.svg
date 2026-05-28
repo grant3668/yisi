@@ -1,107 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" font-family="PingFang SC, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="PingFang SC, Helvetica, Arial, sans-serif">
   <defs>
-    <linearGradient id="f_sky" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bg_sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f5ebd6"/>
       <stop offset="100%" stop-color="#fbf7ef"/>
     </linearGradient>
-    <linearGradient id="f_floor" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="floor_g" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#e8dcc0"/>
       <stop offset="100%" stop-color="#c4a878"/>
     </linearGradient>
-    <linearGradient id="f_wood" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="wd_top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eac890"/>
+      <stop offset="100%" stop-color="#d3a872"/>
+    </linearGradient>
+    <linearGradient id="wd_front" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d9a86b"/>
       <stop offset="100%" stop-color="#a87042"/>
     </linearGradient>
-    <linearGradient id="f_woodLight" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#eac890"/>
-      <stop offset="100%" stop-color="#c08855"/>
-    </linearGradient>
-    <linearGradient id="f_woodDark" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="wd_side" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9c6b3c"/>
       <stop offset="100%" stop-color="#6e4a28"/>
     </linearGradient>
-    <pattern id="f_grain" patternUnits="userSpaceOnUse" width="80" height="6" patternTransform="rotate(0)">
-      <rect width="80" height="6" fill="url(#f_wood)"/>
-      <path d="M0 3 Q20 1 40 3 T80 3" stroke="#7a4d22" stroke-width="0.4" fill="none" opacity="0.6"/>
-      <path d="M0 1.2 Q20 0 40 1.2 T80 1.2" stroke="#62381a" stroke-width="0.25" fill="none" opacity="0.4"/>
-    </pattern>
-    <pattern id="f_grainLight" patternUnits="userSpaceOnUse" width="80" height="6">
-      <rect width="80" height="6" fill="url(#f_woodLight)"/>
-      <path d="M0 3 Q20 1.5 40 3 T80 3" stroke="#8a5828" stroke-width="0.3" fill="none" opacity="0.5"/>
+    <pattern id="grain_top" patternUnits="userSpaceOnUse" width="100" height="6" patternTransform="rotate(-30)">
+      <rect width="100" height="6" fill="url(#wd_top)"/>
+      <path d="M0 3 Q25 1 50 3 T100 3" stroke="#8a5828" stroke-width="0.35" fill="none" opacity="0.55"/>
+      <path d="M0 1.2 Q25 0 50 1.2 T100 1.2" stroke="#6e4216" stroke-width="0.2" fill="none" opacity="0.4"/>
     </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="700" fill="url(#f_sky)"/>
-  <!-- Floor -->
-  <polygon points="0,460 900,460 900,700 0,700" fill="url(#f_floor)"/>
-  <line x1="0" y1="460" x2="900" y2="460" stroke="#a8895a" stroke-width="0.8" opacity="0.4"/>
+  <rect width="900" height="720" fill="url(#bg_sky)"/>
+  <polygon points="0,470 900,470 900,720 0,720" fill="url(#floor_g)"/>
+  <line x1="0" y1="470" x2="900" y2="470" stroke="#a8895a" stroke-width="0.6" opacity="0.5"/>
 
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#3c2a18">Ch.6  完工成品</text>
-  <text x="450" y="64" text-anchor="middle" font-size="12" fill="#7a5a38">44 × 28 × 38 cm · 全部用料：6 木条 + 1 板 + 16 螺丝</text>
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#3c2a18">Ch.6  完工成品</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#7a5a38">44 × 28 × 38 cm · 全部用料：6 木条 + 1 板 + 16 螺丝</text>
 
-  <!-- Shadow on floor -->
-  <ellipse cx="450" cy="610" rx="260" ry="20" fill="#000" opacity="0.18"/>
+  <!--
+    Isometric projection with scale 6 px/cm
+    scene (x, y, z) → svg (200 + 6*x + 5.196*y, 600 - 6*z - 3*y)
+    Scene dims: bench width 44 (x), depth 28 (y), height 38 (z)
+    Parts:
+      Legs (4): 4 × 3 × 35 at the 4 corners
+      Aprons (4): height 3 cm at top of legs
+      Seat board: 44 × 28 × 1 at top
+  -->
 
-  <!-- ===== The bench (large iso) ===== -->
-  <g transform="translate(180,170)">
-    <!-- Back-left leg -->
-    <polygon points="40,180 70,170 70,440 40,455" fill="url(#f_woodDark)" stroke="#5a3c20" stroke-width="0.8"/>
-    <polygon points="70,170 92,180 92,450 70,440" fill="url(#f_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+  <!-- Floor shadow -->
+  <ellipse cx="430" cy="610" rx="250" ry="20" fill="#000" opacity="0.18"/>
 
-    <!-- Back-right leg -->
-    <polygon points="438,108 468,98 468,368 438,383" fill="url(#f_woodDark)" stroke="#5a3c20" stroke-width="0.8"/>
-    <polygon points="468,98 490,108 490,378 468,368" fill="url(#f_wood)" stroke="#5a3c20" stroke-width="0.8"/>
-
-    <!-- Back apron (long, far) -->
-    <polygon points="92,180 438,108 438,140 92,212" fill="url(#f_woodDark)" stroke="#5a3c20" stroke-width="0.5"/>
-    <line x1="92" y1="196" x2="438" y2="124" stroke="#7a4d22" stroke-width="0.4" opacity="0.5"/>
-
-    <!-- Front-left leg -->
-    <polygon points="90,272 120,262 120,535 90,550" fill="url(#f_wood)" stroke="#5a3c20" stroke-width="0.8"/>
-    <polygon points="120,262 142,272 142,545 120,535" fill="url(#f_woodLight)" stroke="#5a3c20" stroke-width="0.8"/>
-
-    <!-- Front-right leg -->
-    <polygon points="488,200 518,190 518,460 488,475" fill="url(#f_wood)" stroke="#5a3c20" stroke-width="0.8"/>
-    <polygon points="518,190 540,200 540,470 518,460" fill="url(#f_woodLight)" stroke="#5a3c20" stroke-width="0.8"/>
-
-    <!-- Front apron (long, near) -->
-    <polygon points="142,272 488,200 488,232 142,304" fill="url(#f_wood)" stroke="#5a3c20" stroke-width="0.5"/>
-    <line x1="142" y1="288" x2="488" y2="216" stroke="#7a4d22" stroke-width="0.4" opacity="0.5"/>
-
-    <!-- Left short apron -->
-    <polygon points="92,180 142,272 142,304 92,212" fill="url(#f_woodLight)" stroke="#5a3c20" stroke-width="0.5"/>
-
-    <!-- Seat board top -->
-    <polygon points="0,200 380,108 510,148 130,240" fill="url(#f_grain)" stroke="#5a3c20" stroke-width="1.2"/>
-    <!-- Seat board left edge (thickness) -->
-    <polygon points="0,200 130,240 130,254 0,214" fill="url(#f_woodDark)" stroke="#5a3c20" stroke-width="0.5"/>
-    <!-- Seat board front edge (thickness) -->
-    <polygon points="130,240 510,148 510,162 130,254" fill="url(#f_woodDark)" stroke="#5a3c20" stroke-width="0.5"/>
-
-    <!-- Highlight on board top -->
-    <polygon points="40,194 200,156 220,165 60,205" fill="#fff" opacity="0.12"/>
+  <!-- ============================================ -->
+  <!-- Back-LEFT leg: scene (0,25,0) to (4,28,35) -->
+  <!-- ============================================ -->
+  <g>
+    <!-- right face -->
+    <polygon points="353.9,525 369.49,516 369.49,306 353.9,315" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- front face -->
+    <polygon points="329.9,525 353.9,525 353.9,315 329.9,315" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- top face (small) -->
+    <polygon points="329.9,315 353.9,315 369.49,306 345.49,306" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
   </g>
 
-  <!-- Decorative element: small star above to mark "完成" -->
-  <g transform="translate(720,140)" opacity="0.85">
-    <polygon points="0,-22 6,-7 22,-5 9,5 14,21 0,12 -14,21 -9,5 -22,-5 -6,-7" fill="#e8b556" stroke="#a87042" stroke-width="0.6"/>
-    <text x="0" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#a87042">完成！</text>
+  <!-- ============================================ -->
+  <!-- Back-RIGHT leg: scene (40,25,0) to (44,28,35) -->
+  <!-- ============================================ -->
+  <g>
+    <polygon points="593.9,525 609.49,516 609.49,306 593.9,315" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="569.9,525 593.9,525 593.9,315 569.9,315" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="569.9,315 593.9,315 609.49,306 585.49,306" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
   </g>
 
-  <!-- Dimension callouts -->
+  <!-- ============================================ -->
+  <!-- Right apron H: scene (41,4,32) to (44,24,35) -->
+  <!-- Spans between front-right and back-right legs on the right side -->
+  <!-- ============================================ -->
+  <g>
+    <!-- right face -->
+    <polygon points="484.78,396 570.7,336 570.7,318 484.78,378" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- front face (small, facing front) -->
+    <polygon points="466.78,396 484.78,396 484.78,378 466.78,378" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- top face -->
+    <polygon points="466.78,378 484.78,378 570.7,318 552.7,318" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Front-LEFT leg: scene (0,0,0) to (4,3,35) -->
+  <!-- ============================================ -->
+  <g>
+    <!-- right face -->
+    <polygon points="224,600 239.59,591 239.59,381 224,390" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- front face -->
+    <polygon points="200,600 224,600 224,390 200,390" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- top face -->
+    <polygon points="200,390 224,390 239.59,381 215.59,381" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Front-RIGHT leg: scene (40,0,0) to (44,3,35) -->
+  <!-- ============================================ -->
+  <g>
+    <polygon points="464,600 479.59,591 479.59,381 464,390" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="440,600 464,600 464,390 440,390" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="440,390 464,390 479.59,381 455.59,381" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Front apron E: scene (4,0,32) to (40,3,35) -->
+  <!-- ============================================ -->
+  <g>
+    <!-- right face (visible at right end) -->
+    <polygon points="440,408 455.59,399 455.59,381 440,390" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- front face -->
+    <polygon points="224,408 440,408 440,390 224,390" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- top face -->
+    <polygon points="224,390 440,390 455.59,381 239.59,381" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Seat board: scene (0,0,37) to (44,28,38) -->
+  <!-- ============================================ -->
+  <g>
+    <!-- right face (1 cm thick, projected) -->
+    <polygon points="464,378 609.49,294 609.49,288 464,372" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.6"/>
+    <!-- front face (1 cm thick) -->
+    <polygon points="200,378 464,378 464,372 200,372" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.6"/>
+    <!-- top face with grain pattern -->
+    <polygon points="200,372 464,372 609.49,288 345.49,288" fill="url(#grain_top)" stroke="#5a3c20" stroke-width="1"/>
+    <!-- subtle highlight on top -->
+    <polygon points="240,360 380,316 410,323 270,367" fill="#fff" opacity="0.1"/>
+  </g>
+
+  <!-- "完成" star marker -->
+  <g transform="translate(740,150)" opacity="0.9">
+    <polygon points="0,-26 7,-8 26,-6 11,6 16,25 0,14 -16,25 -11,6 -26,-6 -7,-8" fill="#e8b556" stroke="#a87042" stroke-width="0.8"/>
+    <text x="0" y="52" text-anchor="middle" font-size="14" font-weight="bold" fill="#a87042">完成 ✓</text>
+  </g>
+
+  <!-- Dimension callouts: height -->
   <g font-size="11" fill="#5a3c20">
-    <!-- Height -->
-    <line x1="755" y1="370" x2="755" y2="620" stroke="#5a3c20" stroke-width="0.5"/>
-    <line x1="750" y1="370" x2="760" y2="370" stroke="#5a3c20" stroke-width="0.5"/>
-    <line x1="750" y1="620" x2="760" y2="620" stroke="#5a3c20" stroke-width="0.5"/>
-    <text x="765" y="500">高 38</text>
+    <line x1="655" y1="288" x2="655" y2="600" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="650" y1="288" x2="660" y2="288" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="650" y1="600" x2="660" y2="600" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="665" y="448">高 38</text>
+
+    <!-- Width along front -->
+    <line x1="200" y1="620" x2="464" y2="620" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="200" y1="615" x2="200" y2="625" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="464" y1="615" x2="464" y2="625" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="332" y="635" text-anchor="middle">长 44</text>
+
+    <!-- Depth along right -->
+    <line x1="475" y1="608" x2="620" y2="524" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="471" y1="612" x2="479" y2="604" stroke="#5a3c20" stroke-width="0.5"/>
+    <line x1="616" y1="528" x2="624" y2="520" stroke="#5a3c20" stroke-width="0.5"/>
+    <text x="560" y="585" font-size="11" fill="#5a3c20">宽 28</text>
   </g>
 
-  <!-- Bottom stats / quality checks -->
-  <g transform="translate(80,640)" font-size="11" fill="#3c2a18">
+  <!-- Bottom checklist -->
+  <g transform="translate(80,660)" font-size="11" fill="#3c2a18">
     <text x="0" y="0" font-weight="bold">完工自检 ✓</text>
     <text x="100" y="0">四脚平稳　·　接缝紧密　·　边角倒圆　·　表面光滑　·　螺丝沉头不外露</text>
   </g>
