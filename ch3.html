@@ -24,7 +24,7 @@
 
   <main>
     <h1>Ch.3 零件下料</h1>
-    <p class="subtitle">把 6 根木条裁成 8 个零件，加上 1 块板，共 9 个零件</p>
+    <p class="subtitle">把 6 根木条裁成 10 个零件，加上 1 块板，共 11 个零件</p>
 
     <div class="figure">
       <img src="./docs/images/ch3_parts.svg" alt="零件下料图" />
@@ -37,28 +37,31 @@
         <tr><th>原料</th><th>切法</th><th>得到的零件</th><th>废料</th></tr>
       </thead>
       <tbody>
-        <tr><td>① 75 cm</td><td>35 + 35</td><td>腿 A、腿 B</td><td>5 cm</td></tr>
-        <tr><td>② 74 cm</td><td>35 + 35</td><td>腿 C、腿 D</td><td>4 cm</td></tr>
-        <tr><td>③ 63 cm</td><td>36 + 余</td><td>长围裙 E</td><td>27 cm（备用）</td></tr>
-        <tr><td>④ 63 cm</td><td>36 + 余</td><td>长围裙 F</td><td>27 cm（备用）</td></tr>
+        <tr><td>① 75 cm</td><td>37 + 37</td><td>腿 A、腿 B</td><td>1 cm</td></tr>
+        <tr><td>② 74 cm</td><td>37 + 37</td><td>腿 C、腿 D</td><td>0 cm</td></tr>
+        <tr><td>③ 63 cm</td><td>36 + 20</td><td>长围裙 E + 横档 J</td><td>7 cm</td></tr>
+        <tr><td>④ 63 cm</td><td>36 + 20</td><td>长围裙 F + 横档 K</td><td>7 cm</td></tr>
         <tr><td>⑤ 33 cm</td><td>20 + 余</td><td>短围裙 G</td><td>13 cm</td></tr>
         <tr><td>⑥ 35 cm</td><td>20 + 余</td><td>短围裙 H</td><td>15 cm</td></tr>
       </tbody>
     </table>
 
-    <h2>围裙长度计算</h2>
+    <h2>长度计算</h2>
     <ul>
       <li><strong>长围裙</strong>：板长 44 − 两腿宽 (4 + 4) = <code>36 cm</code></li>
       <li><strong>短围裙</strong>：板宽 28 − 两腿宽 (4 + 4) = <code>20 cm</code></li>
+      <li><strong>侧横档</strong>：与短围裙同方向、同长度 = <code>20 cm</code>，装在两条腿之间</li>
+      <li><strong>腿</strong>：总高 38 − 凳面板 1 = <code>37 cm</code>（围裙在腿内侧，不占高度）</li>
     </ul>
 
     <h2>最终零件清单</h2>
     <table>
       <thead><tr><th>编号</th><th>部件</th><th>数量</th><th>尺寸（cm）</th></tr></thead>
       <tbody>
-        <tr><td>A–D</td><td>腿</td><td>4</td><td>35 × 4 × 3</td></tr>
+        <tr><td>A–D</td><td>腿</td><td>4</td><td>37 × 4 × 3</td></tr>
         <tr><td>E、F</td><td>长围裙</td><td>2</td><td>36 × 4 × 3</td></tr>
         <tr><td>G、H</td><td>短围裙</td><td>2</td><td>20 × 4 × 3</td></tr>
+        <tr><td>J、K</td><td>侧横档</td><td>2</td><td>20 × 4 × 3</td></tr>
         <tr><td>I</td><td>凳面板</td><td>1</td><td>44 × 28 × 1</td></tr>
       </tbody>
     </table>

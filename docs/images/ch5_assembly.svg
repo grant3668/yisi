@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1850" font-family="PingFang SC, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 2100" font-family="PingFang SC, Helvetica, Arial, sans-serif">
   <defs>
     <linearGradient id="a_wood" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d9a86b"/>
@@ -17,6 +17,10 @@
       <stop offset="0%" stop-color="#e8c08a"/>
       <stop offset="100%" stop-color="#c08855"/>
     </linearGradient>
+    <linearGradient id="a_brace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7fc8e0"/>
+      <stop offset="100%" stop-color="#3a8aaa"/>
+    </linearGradient>
     <pattern id="a_grain" patternUnits="userSpaceOnUse" width="60" height="6">
       <rect width="60" height="6" fill="url(#a_board)"/>
       <path d="M0 3 Q15 1 30 3 T60 3" stroke="#7a4d22" stroke-width="0.4" fill="none" opacity="0.5"/>
@@ -29,73 +33,67 @@
     </marker>
   </defs>
 
-  <rect width="1100" height="1850" fill="#fbf7ef"/>
-  <text x="550" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#3c2a18">Ch.5  组装步骤详解</text>
-  <text x="550" y="62" text-anchor="middle" font-size="12" fill="#7a5a38">每步都标出涉及的零件与组装方向（红箭头 = 装配运动，蓝点 = 螺丝位置）</text>
+  <rect width="1100" height="2100" fill="#fbf7ef"/>
+  <text x="550" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#3c2a18">Ch.5  组装步骤详解（6 步）</text>
+  <text x="550" y="62" text-anchor="middle" font-size="12" fill="#7a5a38">红箭头 = 装配运动，蓝点 = 螺丝位置，蓝色木件 = 横档</text>
 
   <!-- ============================================ -->
-  <!-- Step 1: cut and sand legs to equal length -->
+  <!-- Step 1: cut and sand legs to equal length (37) -->
   <!-- ============================================ -->
   <g transform="translate(0, 100)">
     <rect x="40" y="0" width="1020" height="240" fill="#fff" stroke="#e8d8b8" stroke-width="1" rx="10"/>
     <circle cx="70" cy="32" r="16" fill="#c4392e"/>
     <text x="70" y="38" text-anchor="middle" fill="#fff" font-weight="bold" font-size="16">1</text>
     <text x="100" y="38" font-size="17" font-weight="bold" fill="#3c2a18">下料 &amp; 把 4 条腿砂到完全等长</text>
-    <text x="100" y="58" font-size="11" fill="#7a5a38">从 75 / 74 cm 木条各切 2 段；4 段并齐砂端面到 35 cm。等长是稳定性的关键。</text>
+    <text x="100" y="58" font-size="11" fill="#7a5a38">从 75 / 74 cm 木条各切 2 段；4 段并齐砂端面到 37 cm。等长是稳定性的关键。</text>
 
-    <!-- Source strips with cut indicators -->
     <g transform="translate(80, 90)">
       <text x="0" y="0" font-size="11" fill="#5a3c20">原料：</text>
-      <!-- 75 cm strip -->
+      <!-- 75 cm strip → 37+37+1 -->
       <rect x="0" y="10" width="300" height="18" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
       <text x="-30" y="22" font-size="11" fill="#5a3c20">①75</text>
-      <line x1="140" y1="6" x2="140" y2="32" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <line x1="280" y1="6" x2="280" y2="32" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <text x="70" y="23" text-anchor="middle" font-size="10" fill="#fff">35</text>
-      <text x="210" y="23" text-anchor="middle" font-size="10" fill="#fff">35</text>
-      <text x="290" y="23" text-anchor="middle" font-size="9" fill="#5a3c20">5</text>
-      <!-- 74 cm strip -->
+      <line x1="148" y1="6" x2="148" y2="32" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <line x1="296" y1="6" x2="296" y2="32" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="74" y="23" text-anchor="middle" font-size="10" fill="#fff">37</text>
+      <text x="222" y="23" text-anchor="middle" font-size="10" fill="#fff">37</text>
+      <text x="298" y="23" text-anchor="middle" font-size="9" fill="#5a3c20">1</text>
+      <!-- 74 cm strip → 37+37 -->
       <rect x="0" y="40" width="296" height="18" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
       <text x="-30" y="52" font-size="11" fill="#5a3c20">②74</text>
-      <line x1="140" y1="36" x2="140" y2="62" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <line x1="280" y1="36" x2="280" y2="62" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <text x="70" y="53" text-anchor="middle" font-size="10" fill="#fff">35</text>
-      <text x="210" y="53" text-anchor="middle" font-size="10" fill="#fff">35</text>
-      <text x="288" y="53" text-anchor="middle" font-size="9" fill="#5a3c20">4</text>
+      <line x1="148" y1="36" x2="148" y2="62" stroke="#c4392e" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="74" y="53" text-anchor="middle" font-size="10" fill="#fff">37</text>
+      <text x="222" y="53" text-anchor="middle" font-size="10" fill="#fff">37</text>
     </g>
 
-    <!-- Arrow -->
     <line x1="430" y1="135" x2="510" y2="135" stroke="#c4392e" stroke-width="2.5" marker-end="url(#a_arr)"/>
     <text x="470" y="125" text-anchor="middle" font-size="11" fill="#c4392e">切割</text>
 
-    <!-- 4 legs stacked -->
     <g transform="translate(540, 100)">
       <text x="0" y="0" font-size="11" fill="#5a3c20">4 条腿叠齐，端面砂平：</text>
       <g>
-        <rect x="0" y="15" width="200" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+        <rect x="0" y="15" width="220" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="-12" y="25" font-size="10" fill="#5a3c20">A</text>
-        <rect x="0" y="30" width="200" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+        <rect x="0" y="30" width="220" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="-12" y="40" font-size="10" fill="#5a3c20">B</text>
-        <rect x="0" y="45" width="200" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+        <rect x="0" y="45" width="220" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="-12" y="55" font-size="10" fill="#5a3c20">C</text>
-        <rect x="0" y="60" width="200" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+        <rect x="0" y="60" width="220" height="12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="-12" y="70" font-size="10" fill="#5a3c20">D</text>
       </g>
-      <!-- sanding indication: shaded area at ends -->
       <rect x="-4" y="11" width="8" height="64" fill="#fff" opacity="0" stroke="#2c6caf" stroke-width="1.5" stroke-dasharray="3,2"/>
-      <rect x="196" y="11" width="8" height="64" fill="#fff" opacity="0" stroke="#2c6caf" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <rect x="216" y="11" width="8" height="64" fill="#fff" opacity="0" stroke="#2c6caf" stroke-width="1.5" stroke-dasharray="3,2"/>
       <text x="-25" y="100" font-size="10" fill="#2c6caf">↑ 砂平</text>
-      <text x="175" y="100" font-size="10" fill="#2c6caf">↑ 砂平</text>
+      <text x="195" y="100" font-size="10" fill="#2c6caf">↑ 砂平</text>
 
-      <line x1="0" y1="120" x2="200" y2="120" stroke="#5a3c20" stroke-width="0.5"/>
+      <line x1="0" y1="120" x2="220" y2="120" stroke="#5a3c20" stroke-width="0.5"/>
       <line x1="0" y1="115" x2="0" y2="125" stroke="#5a3c20" stroke-width="0.5"/>
-      <line x1="200" y1="115" x2="200" y2="125" stroke="#5a3c20" stroke-width="0.5"/>
-      <text x="100" y="135" text-anchor="middle" font-size="11" fill="#5a3c20">最终 35 cm 等长</text>
+      <line x1="220" y1="115" x2="220" y2="125" stroke="#5a3c20" stroke-width="0.5"/>
+      <text x="110" y="135" text-anchor="middle" font-size="11" fill="#5a3c20">最终 37 cm 等长</text>
     </g>
   </g>
 
   <!-- ============================================ -->
-  <!-- Step 2: build apron frame (top view, very clear) -->
+  <!-- Step 2: build apron frame (top view) -->
   <!-- ============================================ -->
   <g transform="translate(0, 370)">
     <rect x="40" y="0" width="1020" height="320" fill="#fff" stroke="#e8d8b8" stroke-width="1" rx="10"/>
@@ -104,57 +102,43 @@
     <text x="100" y="38" font-size="17" font-weight="bold" fill="#3c2a18">拼围裙框（俯视图）</text>
     <text x="100" y="58" font-size="11" fill="#7a5a38">G、H 短围裙(20) 嵌在 E、F 长围裙(36) 之间。先涂胶 → 预钻 3mm 孔 → 拧 50mm 螺丝。</text>
 
-    <!-- LEFT: parts laid out separately -->
     <g transform="translate(80, 90)">
       <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">A. 4 个零件就位</text>
 
-      <!-- E -->
       <rect x="0" y="20" width="216" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
       <text x="108" y="34" text-anchor="middle" font-size="11" fill="#fff">长围裙 E (36 cm)</text>
 
-      <!-- G -->
       <rect x="0" y="60" width="120" height="20" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
       <text x="60" y="74" text-anchor="middle" font-size="11" fill="#fff">短围裙 G (20)</text>
 
-      <!-- H -->
       <rect x="170" y="60" width="120" height="20" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
       <text x="230" y="74" text-anchor="middle" font-size="11" fill="#fff">短围裙 H (20)</text>
 
-      <!-- F -->
       <rect x="0" y="100" width="216" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
       <text x="108" y="114" text-anchor="middle" font-size="11" fill="#fff">长围裙 F (36 cm)</text>
 
-      <text x="0" y="155" font-size="10" fill="#7a5a38">↑ 注意：长围裙 E/F 平行；短围裙 G/H 垂直放置</text>
+      <text x="0" y="155" font-size="10" fill="#7a5a38">↑ 长围裙 E/F 平行；短围裙 G/H 垂直</text>
     </g>
 
-    <!-- Arrow -->
     <line x1="400" y1="180" x2="470" y2="180" stroke="#c4392e" stroke-width="2.5" marker-end="url(#a_arr)"/>
     <text x="435" y="170" text-anchor="middle" font-size="11" fill="#c4392e">组合</text>
 
-    <!-- RIGHT: assembled frame (top view) -->
     <g transform="translate(500, 90)">
       <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">B. 组合后的矩形框（俯视）</text>
 
-      <!-- Frame in top-down view. Outer dim: 36 x 28 (36 from E length, 28 = 4+20+4 from short total -->
-      <!-- Scale: 5px/cm  →  36cm = 180px, 28cm = 140px, 4cm width = 20px -->
       <g transform="translate(40, 20)">
-        <!-- E (top, 36 long, 4 wide) -->
         <rect x="0" y="0" width="180" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
         <text x="90" y="14" text-anchor="middle" font-size="11" fill="#fff">E (36)</text>
 
-        <!-- F (bottom) -->
         <rect x="0" y="120" width="180" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
         <text x="90" y="134" text-anchor="middle" font-size="11" fill="#fff">F (36)</text>
 
-        <!-- G (left, between E and F) -->
         <rect x="0" y="20" width="20" height="100" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.8"/>
         <text x="10" y="74" text-anchor="middle" font-size="10" fill="#fff" transform="rotate(-90 10 74)">G (20)</text>
 
-        <!-- H (right) -->
         <rect x="160" y="20" width="20" height="100" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.8"/>
         <text x="170" y="74" text-anchor="middle" font-size="10" fill="#fff" transform="rotate(-90 170 74)">H (20)</text>
 
-        <!-- 4 corner screws -->
         <g fill="#2c6caf" stroke="#1a4570" stroke-width="0.5">
           <circle cx="10" cy="10" r="4"/>
           <circle cx="170" cy="10" r="4"/>
@@ -164,7 +148,6 @@
         <text x="-15" y="14" font-size="9" fill="#2c6caf">螺丝</text>
         <line x1="-3" y1="11" x2="6" y2="10" stroke="#2c6caf" stroke-width="0.5"/>
 
-        <!-- outer dim labels -->
         <line x1="0" y1="-12" x2="180" y2="-12" stroke="#5a3c20" stroke-width="0.4"/>
         <line x1="0" y1="-15" x2="0" y2="-9" stroke="#5a3c20" stroke-width="0.4"/>
         <line x1="180" y1="-15" x2="180" y2="-9" stroke="#5a3c20" stroke-width="0.4"/>
@@ -186,44 +169,19 @@
   <!-- Step 3: attach 4 legs to apron frame corners -->
   <!-- ============================================ -->
   <g transform="translate(0, 720)">
-    <rect x="40" y="0" width="1020" height="360" fill="#fff" stroke="#e8d8b8" stroke-width="1" rx="10"/>
+    <rect x="40" y="0" width="1020" height="320" fill="#fff" stroke="#e8d8b8" stroke-width="1" rx="10"/>
     <circle cx="70" cy="32" r="16" fill="#c4392e"/>
     <text x="70" y="38" text-anchor="middle" fill="#fff" font-weight="bold" font-size="16">3</text>
     <text x="100" y="38" font-size="17" font-weight="bold" fill="#3c2a18">装 4 条腿（把框翻过来）</text>
-    <text x="100" y="58" font-size="11" fill="#7a5a38">围裙框开口朝上，4 条腿放在 4 个内角，顶端与围裙顶面齐平，每条腿用 2 颗 50mm 螺丝固定。</text>
+    <text x="100" y="58" font-size="11" fill="#7a5a38">围裙框开口朝上，4 条 37 cm 腿放在 4 个内角，顶端与围裙顶面齐平，每条腿用 2 颗 50mm 螺丝固定。</text>
 
-    <!-- Iso view of frame with legs being attached -->
-    <g transform="translate(280, 110)">
-      <!-- Apron frame (upside down position) shown in isometric -->
-      <!-- Outer frame: 36 x 28 footprint, 3 cm high -->
-      <!-- Render at 6 px/cm: 216 x 168 footprint, 18 px tall. Iso cabinet projection: depth at 30°-->
-      <!-- Frame top surface (parallelogram from above) -->
-      <g>
-        <!-- Top face of frame: 4 strips forming a rectangle hole -->
-        <!-- frame outer: corners A(0,0), B(216,0), C(216 + 168*cos30, -168*sin30) = (216+145, -84), D(145, -84) -->
-        <!-- frame outer parallelogram -->
-        <polygon points="0,0 216,0 361,-84 145,-84" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.8"/>
-
-        <!-- inner hole: inset 4cm = 24px from all sides -->
-        <!-- inner hole corners: top-left (24, 0-skip… let me compute: each apron 4cm wide, so hole starts 24px in from each side along its parallel direction -->
-        <!-- top apron E: 0..216 wide, 0..24 in depth (inner edge at depth=24cm? no, 4cm = 24px). At cabinet projection, going into depth: 24cm = 24*6=144 ... wait scale is 6px/cm but I'm using 24 as if 4cm. Let me redo -->
-
-        <!-- Actually let me restart this with consistent scale. -->
-      </g>
-    </g>
-
-    <!-- Simpler: side-by-side: front view + top view to show clearly -->
     <g transform="translate(80, 100)">
       <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">俯视：4 条腿装入框内 4 角</text>
 
-      <!-- Top view of the assembly. Outer = full board projection 44x28; legs at 4 corners; aprons in between -->
-      <!-- Scale 5px/cm: 44 = 220, 28 = 140, leg 4x3 = 20x15, apron 4 wide = 20 -->
       <g transform="translate(20, 30)">
-        <!-- Imaginary board outline (dashed) for reference -->
         <rect x="0" y="0" width="220" height="140" fill="none" stroke="#a87042" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4"/>
         <text x="110" y="-6" text-anchor="middle" font-size="9" fill="#a87042">凳面板轮廓(参考)</text>
 
-        <!-- 4 legs at corners (4x3 cross section: 20 wide x 15 deep, but for top view show 4cm x 3cm = 20 x 15 px) -->
         <g fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.8">
           <rect x="0" y="0" width="20" height="15"/>
           <rect x="200" y="0" width="20" height="15"/>
@@ -235,32 +193,22 @@
         <text x="10" y="136" text-anchor="middle" font-size="9" fill="#fff">C</text>
         <text x="210" y="136" text-anchor="middle" font-size="9" fill="#fff">D</text>
 
-        <!-- Aprons -->
-        <!-- E (top long apron): 36cm = 180px, from x=20 to x=200, depth 4cm = 20px from y=0 -->
         <rect x="20" y="0" width="180" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="110" y="14" text-anchor="middle" font-size="10" fill="#fff">E (36)</text>
-        <!-- F (bottom long apron) -->
         <rect x="20" y="120" width="180" height="20" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="110" y="134" text-anchor="middle" font-size="10" fill="#fff">F (36)</text>
-        <!-- G (left short apron): 20cm = 100px, from y=20 to y=120, width 4cm = 20px from x=0 -->
         <rect x="0" y="20" width="20" height="100" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="10" y="74" text-anchor="middle" font-size="10" fill="#fff" transform="rotate(-90 10 74)">G (20)</text>
-        <!-- H (right) -->
         <rect x="200" y="20" width="20" height="100" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="210" y="74" text-anchor="middle" font-size="10" fill="#fff" transform="rotate(-90 210 74)">H (20)</text>
 
-        <!-- Screw markers: 2 per leg → 8 total -->
         <g fill="#2c6caf" stroke="#1a4570" stroke-width="0.5">
-          <!-- A: screw from E + screw from G -->
           <circle cx="10" cy="8" r="3.5"/>
           <circle cx="8" cy="22" r="3.5"/>
-          <!-- B: screw from E + screw from H -->
           <circle cx="210" cy="8" r="3.5"/>
           <circle cx="212" cy="22" r="3.5"/>
-          <!-- C: screw from F + screw from G -->
           <circle cx="10" cy="132" r="3.5"/>
           <circle cx="8" cy="118" r="3.5"/>
-          <!-- D: screw from F + screw from H -->
           <circle cx="210" cy="132" r="3.5"/>
           <circle cx="212" cy="118" r="3.5"/>
         </g>
@@ -269,32 +217,26 @@
       <text x="120" y="200" text-anchor="middle" font-size="10" fill="#7a5a38">8 颗 50mm 螺丝（每腿 2 颗，来自两个相邻围裙）</text>
     </g>
 
-    <!-- Side/iso view of corner joint detail -->
     <g transform="translate(540, 90)">
       <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">角部接合细节（剖面）</text>
 
       <g transform="translate(20, 30)">
-        <!-- Leg (vertical, 4cm wide x 35cm tall, scale 4px/cm: 16 x 140) -->
         <rect x="80" y="0" width="40" height="200" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.8"/>
-        <text x="100" y="105" text-anchor="middle" font-size="11" fill="#fff" transform="rotate(-90 100 105)">腿 (35 cm)</text>
+        <text x="100" y="105" text-anchor="middle" font-size="11" fill="#fff" transform="rotate(-90 100 105)">腿 (37 cm)</text>
 
-        <!-- Long apron attached to leg side -->
         <rect x="120" y="10" width="180" height="30" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
         <text x="210" y="30" text-anchor="middle" font-size="11" fill="#fff">长围裙 E（连接到腿）</text>
 
-        <!-- Screws into leg from apron -->
         <g>
           <line x1="135" y1="20" x2="105" y2="20" stroke="#2c6caf" stroke-width="2" marker-end="url(#a_arr_blue)"/>
           <line x1="135" y1="32" x2="105" y2="32" stroke="#2c6caf" stroke-width="2" marker-end="url(#a_arr_blue)"/>
         </g>
         <text x="150" y="60" font-size="10" fill="#2c6caf">↑ 50mm 螺丝穿过围裙咬住腿</text>
 
-        <!-- Dimension: leg top flush with apron top -->
         <line x1="60" y1="0" x2="60" y2="10" stroke="#c4392e" stroke-width="1" stroke-dasharray="2,2"/>
         <text x="0" y="14" font-size="10" fill="#c4392e">腿顶与</text>
         <text x="0" y="26" font-size="10" fill="#c4392e">围裙齐平</text>
 
-        <!-- Floor line -->
         <line x1="60" y1="220" x2="140" y2="220" stroke="#5a3c20" stroke-width="0.5"/>
         <text x="100" y="234" text-anchor="middle" font-size="10" fill="#5a3c20">↑ 腿底接触地面</text>
       </g>
@@ -302,127 +244,204 @@
   </g>
 
   <!-- ============================================ -->
-  <!-- Step 4: attach seat board on top -->
+  <!-- Step 4 (NEW): attach side stretchers J, K -->
   <!-- ============================================ -->
-  <g transform="translate(0, 1110)">
-    <rect x="40" y="0" width="1020" height="380" fill="#fff" stroke="#e8d8b8" stroke-width="1" rx="10"/>
-    <circle cx="70" cy="32" r="16" fill="#c4392e"/>
+  <g transform="translate(0, 1070)">
+    <rect x="40" y="0" width="1020" height="320" fill="#fff" stroke="#3a8aaa" stroke-width="1.2" rx="10"/>
+    <circle cx="70" cy="32" r="16" fill="#3a8aaa"/>
     <text x="70" y="38" text-anchor="middle" fill="#fff" font-weight="bold" font-size="16">4</text>
-    <text x="100" y="38" font-size="17" font-weight="bold" fill="#3c2a18">装凳面板（爆炸图）</text>
-    <text x="100" y="58" font-size="11" fill="#7a5a38">把板放在围裙框顶面，四周对称悬出各 4 cm。从围裙顶面向上打 8 颗 30mm 螺丝。</text>
+    <text x="100" y="38" font-size="17" font-weight="bold" fill="#3c2a18">装侧横档 J/K（加固关键步骤）</text>
+    <text x="100" y="58" font-size="11" fill="#7a5a38">横档与短围裙同方向，装在两条腿之间，距地 12 cm。把同侧前后腿连成 H 形，显著抗摇晃。</text>
 
-    <!-- Exploded iso view: board floats above, frame+legs below -->
-    <g transform="translate(280, 90)">
-      <!-- ===== Seat board (top, floating) ===== -->
-      <!-- top face: 44 x 28, drawn iso at scale 4 px/cm with depth at 30°. -->
-      <!-- top-front-left (0,0), top-front-right (176,0), top-back-right (176+97, -56)=(273,-56), top-back-left (97,-56) -->
-      <g transform="translate(0,0)">
-        <!-- top face -->
+    <!-- Left: side view showing H stretcher placement -->
+    <g transform="translate(80, 90)">
+      <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">A. 侧视图：H 形结构</text>
+
+      <g transform="translate(20, 20)">
+        <!-- 2 legs (each 4cm wide × 37cm tall, scale 4 px/cm: 16×148) -->
+        <rect x="0" y="0" width="16" height="148" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+        <rect x="96" y="0" width="16" height="148" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+        <!-- short apron at top (4cm tall to be visible at this scale, real 3cm) -->
+        <rect x="16" y="0" width="80" height="12" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.8"/>
+        <text x="56" y="9" text-anchor="middle" font-size="9" fill="#5a3c20">短围裙</text>
+        <!-- stretcher at z=12-15 from bottom (= 22-25 cm from top, scale 4: 88-100 px from top of leg) -->
+        <rect x="16" y="88" width="80" height="12" fill="url(#a_brace)" stroke="#1a4570" stroke-width="1"/>
+        <text x="56" y="97" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">横档 (20)</text>
+
+        <!-- Floor line -->
+        <line x1="-10" y1="148" x2="122" y2="148" stroke="#5a3c20" stroke-width="0.6"/>
+        <text x="56" y="162" text-anchor="middle" font-size="9" fill="#5a3c20">地面</text>
+
+        <!-- Dim: height from floor to bottom of stretcher = 12 cm -->
+        <line x1="130" y1="100" x2="130" y2="148" stroke="#3a8aaa" stroke-width="0.5"/>
+        <line x1="125" y1="100" x2="135" y2="100" stroke="#3a8aaa" stroke-width="0.5"/>
+        <line x1="125" y1="148" x2="135" y2="148" stroke="#3a8aaa" stroke-width="0.5"/>
+        <text x="140" y="128" font-size="10" fill="#3a8aaa">12 cm</text>
+
+        <!-- Dim: stretcher length 20 -->
+        <line x1="16" y1="115" x2="96" y2="115" stroke="#5a3c20" stroke-width="0.4"/>
+        <line x1="16" y1="112" x2="16" y2="118" stroke="#5a3c20" stroke-width="0.4"/>
+        <line x1="96" y1="112" x2="96" y2="118" stroke="#5a3c20" stroke-width="0.4"/>
+        <text x="56" y="126" text-anchor="middle" font-size="9" fill="#5a3c20">20 cm</text>
+
+        <text x="56" y="186" text-anchor="middle" font-size="10" fill="#3a8aaa" font-weight="bold">"H 形" = 抗前后摇晃</text>
+      </g>
+    </g>
+
+    <line x1="320" y1="180" x2="390" y2="180" stroke="#c4392e" stroke-width="2.5" marker-end="url(#a_arr)"/>
+
+    <!-- Middle: screw detail -->
+    <g transform="translate(420, 90)">
+      <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">B. 接合细节（俯视局部）</text>
+
+      <g transform="translate(0, 20)">
+        <!-- Leg (top view 4cm×3cm, scale 8 px/cm: 32×24) -->
+        <rect x="0" y="0" width="32" height="24" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.8"/>
+        <text x="16" y="14" text-anchor="middle" font-size="9" fill="#fff">腿</text>
+
+        <!-- Stretcher end (4cm wide × 3cm thick, abutting leg from below in this top view) -->
+        <rect x="0" y="24" width="32" height="120" fill="url(#a_brace)" stroke="#1a4570" stroke-width="0.8"/>
+        <text x="16" y="80" text-anchor="middle" font-size="10" fill="#fff" transform="rotate(-90 16 80)">横档 J</text>
+
+        <!-- Other leg below -->
+        <rect x="0" y="144" width="32" height="24" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.8"/>
+        <text x="16" y="158" text-anchor="middle" font-size="9" fill="#fff">腿</text>
+
+        <!-- Screw arrows (from OUTSIDE leg INTO stretcher end) -->
+        <line x1="-25" y1="12" x2="14" y2="36" stroke="#2c6caf" stroke-width="2" marker-end="url(#a_arr_blue)"/>
+        <text x="-35" y="6" font-size="9" fill="#2c6caf">50mm</text>
+
+        <line x1="-25" y1="156" x2="14" y2="132" stroke="#2c6caf" stroke-width="2" marker-end="url(#a_arr_blue)"/>
+        <text x="-35" y="172" font-size="9" fill="#2c6caf">50mm</text>
+
+        <text x="80" y="80" font-size="10" fill="#3c2a18">每端 1 颗螺丝</text>
+        <text x="80" y="95" font-size="10" fill="#3c2a18">从腿外侧打入</text>
+        <text x="80" y="110" font-size="10" fill="#7a5a38">2 根横档 × 2 颗</text>
+        <text x="80" y="125" font-size="10" fill="#7a5a38">= 共 4 颗 50mm</text>
+      </g>
+    </g>
+
+    <line x1="660" y1="180" x2="730" y2="180" stroke="#c4392e" stroke-width="2.5" marker-end="url(#a_arr)"/>
+
+    <!-- Right: H assembled (front view of both stretchers) -->
+    <g transform="translate(760, 90)">
+      <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">C. 装完后（前视）</text>
+
+      <g transform="translate(20, 20)">
+        <!-- Both side stretchers seen end-on as small rectangles on each leg -->
+        <!-- Show two legs, both have a stretcher behind them indicated -->
+        <rect x="0" y="0" width="16" height="148" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+        <rect x="180" y="0" width="16" height="148" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.8"/>
+        <!-- front apron -->
+        <rect x="16" y="0" width="164" height="12" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.8"/>
+        <!-- stretchers behind legs (dashed boxes on each leg at z=12..15) -->
+        <rect x="0" y="88" width="16" height="12" fill="url(#a_brace)" stroke="#1a4570" stroke-width="0.5" opacity="0.85" stroke-dasharray="2,1.5"/>
+        <rect x="180" y="88" width="16" height="12" fill="url(#a_brace)" stroke="#1a4570" stroke-width="0.5" opacity="0.85" stroke-dasharray="2,1.5"/>
+        <text x="98" y="98" text-anchor="middle" font-size="9" fill="#3a8aaa">横档藏在腿后（端面）</text>
+        <line x1="-10" y1="148" x2="206" y2="148" stroke="#5a3c20" stroke-width="0.6"/>
+        <text x="98" y="170" text-anchor="middle" font-size="10" fill="#3c2a18">两侧各 1 根，共 2 根</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Step 5: attach seat board (was step 4) -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 1420)">
+    <rect x="40" y="0" width="1020" height="320" fill="#fff" stroke="#e8d8b8" stroke-width="1" rx="10"/>
+    <circle cx="70" cy="32" r="16" fill="#c4392e"/>
+    <text x="70" y="38" text-anchor="middle" fill="#fff" font-weight="bold" font-size="16">5</text>
+    <text x="100" y="38" font-size="17" font-weight="bold" fill="#3c2a18">装凳面板（板与腿顶齐平）</text>
+    <text x="100" y="58" font-size="11" fill="#7a5a38">板放在围裙框顶面（也是腿顶），四周对称悬出各 4 cm。从围裙顶面向上打 8 颗 30mm 螺丝。</text>
+
+    <g transform="translate(120, 100)">
+      <text x="0" y="0" font-size="12" font-weight="bold" fill="#3c2a18">爆炸图：板从上方落到腿+围裙顶</text>
+
+      <!-- Board floating above (top view parallelogram) -->
+      <g transform="translate(0, 30)">
         <polygon points="0,0 176,0 273,-56 97,-56" fill="url(#a_grain)" stroke="#5a3c20" stroke-width="1"/>
-        <!-- front edge -->
-        <polygon points="0,0 176,0 176,4 0,4" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
-        <!-- right edge -->
-        <polygon points="176,0 273,-56 273,-52 176,4" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
+        <polygon points="0,0 176,0 176,5 0,5" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
+        <polygon points="176,0 273,-56 273,-51 176,5" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="100" y="-25" font-size="11" fill="#3c2a18">I 凳面板 (44 × 28 × 1)</text>
       </g>
 
-      <!-- Down arrows (board → frame) -->
+      <!-- Down arrows -->
       <g stroke="#c4392e" stroke-width="2" fill="none">
-        <line x1="40" y1="20" x2="40" y2="80" marker-end="url(#a_arr)"/>
-        <line x1="140" y1="20" x2="140" y2="80" marker-end="url(#a_arr)"/>
-        <line x1="240" y1="-30" x2="240" y2="30" marker-end="url(#a_arr)"/>
+        <line x1="40" y1="50" x2="40" y2="100" marker-end="url(#a_arr)"/>
+        <line x1="140" y1="50" x2="140" y2="100" marker-end="url(#a_arr)"/>
+        <line x1="240" y1="-5" x2="240" y2="45" marker-end="url(#a_arr)"/>
       </g>
 
-      <!-- ===== Frame + Legs (below, assembled state from step 3) ===== -->
-      <g transform="translate(20, 110)">
-        <!-- Apron frame: 36 long × 28 deep × 3 high. -->
-        <!-- top of frame (4 strips forming a rectangle with a hole) -->
-        <!-- frame outer: 36*4=144 wide, 28*4=112 deep, top at z. iso: corners FL(0,0), FR(144,0), BR(144+97,-56), BL(97,-56) -->
-        <!-- top face: 4 trapezoid strips for E, F, G, H -->
-        <!-- E (front long apron, 36 long × 4 deep, top): from (0,0) to (144,0) and back to (144 - 14, -8)..(0+14,-8). Wait, 4cm deep at scale 4 = 16px. Iso depth offset: 16*0.866 = ~14, 16*0.5 = 8. -->
-        <!-- For clarity I'll simplify: render the frame top as a single parallelogram with darker color, marking apron positions -->
+      <!-- Frame + legs below (top view of apron+legs at z=37 top) -->
+      <g transform="translate(20, 130)">
+        <!-- Apron frame top -->
         <polygon points="0,0 144,0 241,-56 97,-56" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.8"/>
-        <!-- inner hole (apron frame opening): inset 4cm from each side -->
-        <!-- inset 16px in width on both sides, inset along depth: 16cm in but at iso projection 16cm of depth = 14 right, -8 up -->
-        <!-- inner FL: (16+14, -8), inner FR: (144-16+14, -8) = (142, -8), inner BR: (142+97-2*14, -56-2*-8) ... too complex -->
-        <!-- Approximate inner hole as a smaller parallelogram -->
+        <!-- inner hole -->
         <polygon points="20,-8 124,-8 207,-48 103,-48" fill="#f0e0c0" stroke="#5a3c20" stroke-width="0.5"/>
 
-        <!-- Front face of frame (3cm height) -->
         <polygon points="0,0 144,0 144,12 0,12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="72" y="9" text-anchor="middle" font-size="10" fill="#fff">E 长围裙</text>
 
-        <!-- Right face of frame (depth side, projected at 30°) -->
         <polygon points="144,0 241,-56 241,-44 144,12" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
-        <text x="192" y="-12" font-size="10" fill="#fff" transform="rotate(-30 192 -12)">H 短</text>
 
-        <!-- Legs (4) -->
-        <!-- front-left leg: 4cm wide × 3cm deep, 35cm tall (140px). Position at frame front-left corner -->
-        <!-- leg face front: rectangle from (0,12) down 140 by 16 wide -->
+        <!-- 4 legs (only top portions visible from this exploded view) -->
         <g>
-          <!-- Front-left leg -->
-          <rect x="0" y="12" width="16" height="140" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
-          <!-- leg right face (depth) -->
-          <polygon points="16,12 28,4 28,144 16,152" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+          <rect x="0" y="12" width="16" height="120" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
+          <polygon points="16,12 28,4 28,124 16,132" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
 
-          <!-- Front-right leg -->
-          <rect x="128" y="12" width="16" height="140" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
-          <polygon points="144,12 156,4 156,144 144,152" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+          <rect x="128" y="12" width="16" height="120" fill="url(#a_wood_dk)" stroke="#5a3c20" stroke-width="0.6"/>
+          <polygon points="144,12 156,4 156,124 144,132" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
 
-          <!-- Back-left leg (offset by depth) -->
-          <rect x="97" y="-44" width="16" height="140" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
-          <polygon points="113,-44 125,-52 125,88 113,96" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.6"/>
+          <rect x="97" y="-44" width="16" height="120" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+          <polygon points="113,-44 125,-52 125,68 113,76" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.6"/>
 
-          <!-- Back-right leg (rightmost) -->
-          <rect x="225" y="-44" width="16" height="140" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
-          <polygon points="241,-44 253,-52 253,88 241,96" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.6"/>
+          <rect x="225" y="-44" width="16" height="120" fill="url(#a_wood)" stroke="#5a3c20" stroke-width="0.6"/>
+          <polygon points="241,-44 253,-52 253,68 241,76" fill="url(#a_wood_lt)" stroke="#5a3c20" stroke-width="0.6"/>
         </g>
 
-        <text x="-10" y="160" font-size="10" fill="#5a3c20">A</text>
-        <text x="135" y="160" font-size="10" fill="#5a3c20">B</text>
-        <text x="92" y="105" font-size="10" fill="#5a3c20">C</text>
-        <text x="220" y="105" font-size="10" fill="#5a3c20">D</text>
+        <!-- stretchers visible on sides (between front-back legs) -->
+        <g fill="url(#a_brace)" stroke="#1a4570" stroke-width="0.5" opacity="0.9">
+          <rect x="225" y="44" width="16" height="12"/>
+        </g>
+        <text x="265" y="56" font-size="9" fill="#3a8aaa">↑ 横档 K</text>
 
-        <!-- Screws going UP from apron top into board (shown as blue dots on apron top) -->
         <g fill="#2c6caf" stroke="#1a4570" stroke-width="0.5">
           <circle cx="40" cy="-4" r="3.5"/>
           <circle cx="100" cy="-4" r="3.5"/>
           <circle cx="180" cy="-50" r="3.5"/>
           <circle cx="120" cy="-32" r="3.5"/>
         </g>
-        <text x="60" y="180" font-size="9" fill="#2c6caf">蓝点 = 30mm 螺丝（从围裙顶面向上打入凳面板）</text>
+        <text x="20" y="160" font-size="9" fill="#2c6caf">蓝点 = 30mm 螺丝（围裙顶面 → 板）</text>
       </g>
 
-      <text x="40" y="320" font-size="10" fill="#7a5a38">板四周悬出 4 cm（44-36=8 ÷ 2 = 4；28-20=8 ÷ 2 = 4），前后左右完全对称</text>
+      <text x="40" y="280" font-size="10" fill="#7a5a38">板四周悬出 4 cm（44-36=8 ÷ 2 = 4；28-20=8 ÷ 2 = 4），前后左右对称</text>
     </g>
   </g>
 
   <!-- ============================================ -->
-  <!-- Step 5: finish & check -->
+  <!-- Step 6: finish & check (was step 5) -->
   <!-- ============================================ -->
-  <g transform="translate(0, 1520)">
+  <g transform="translate(0, 1770)">
     <rect x="40" y="0" width="1020" height="280" fill="#fff" stroke="#e8d8b8" stroke-width="1" rx="10"/>
     <circle cx="70" cy="32" r="16" fill="#c4392e"/>
-    <text x="70" y="38" text-anchor="middle" fill="#fff" font-weight="bold" font-size="16">5</text>
+    <text x="70" y="38" text-anchor="middle" fill="#fff" font-weight="bold" font-size="16">6</text>
     <text x="100" y="38" font-size="17" font-weight="bold" fill="#3c2a18">检查 → 打磨 → 上油</text>
-    <text x="100" y="58" font-size="11" fill="#7a5a38">站平地检查是否四脚稳定 → 80/120/240 目逐级砂光 → 木蜡油 2 遍。</text>
+    <text x="100" y="58" font-size="11" fill="#7a5a38">站平地检查是否四脚稳定（带横档后应几乎不晃） → 80/120/240 目逐级砂光 → 木蜡油 2 遍。</text>
 
     <g transform="translate(120, 100)">
-      <!-- Check step -->
       <g transform="translate(0,0)">
         <rect x="0" y="0" width="200" height="140" fill="#fff7e6" stroke="#a87042" stroke-width="0.8" rx="6"/>
         <text x="100" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#3c2a18">① 检查</text>
-        <!-- simple bench on floor with check mark -->
         <rect x="40" y="55" width="120" height="8" fill="url(#a_wood)"/>
         <rect x="50" y="63" width="8" height="50" fill="url(#a_wood_dk)"/>
         <rect x="142" y="63" width="8" height="50" fill="url(#a_wood_dk)"/>
+        <rect x="50" y="92" width="100" height="6" fill="url(#a_brace)"/>
         <line x1="30" y1="115" x2="170" y2="115" stroke="#5a3c20" stroke-width="0.6"/>
         <text x="100" y="132" text-anchor="middle" font-size="10" fill="#5a3c20">放平地，不晃 ✓</text>
       </g>
 
       <line x1="220" y1="70" x2="270" y2="70" stroke="#c4392e" stroke-width="2" marker-end="url(#a_arr)"/>
 
-      <!-- Sand step -->
       <g transform="translate(280,0)">
         <rect x="0" y="0" width="200" height="140" fill="#fff7e6" stroke="#a87042" stroke-width="0.8" rx="6"/>
         <text x="100" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#3c2a18">② 打磨</text>
@@ -434,7 +453,6 @@
 
       <line x1="500" y1="70" x2="550" y2="70" stroke="#c4392e" stroke-width="2" marker-end="url(#a_arr)"/>
 
-      <!-- Oil step -->
       <g transform="translate(560,0)">
         <rect x="0" y="0" width="200" height="140" fill="#fff7e6" stroke="#a87042" stroke-width="0.8" rx="6"/>
         <text x="100" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#3c2a18">③ 上油</text>

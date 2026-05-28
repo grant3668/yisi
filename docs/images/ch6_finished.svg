@@ -33,99 +33,91 @@
   <line x1="0" y1="470" x2="900" y2="470" stroke="#a8895a" stroke-width="0.6" opacity="0.5"/>
 
   <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#3c2a18">Ch.6  完工成品</text>
-  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#7a5a38">44 × 28 × 38 cm · 全部用料：6 木条 + 1 板 + 16 螺丝</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#7a5a38">44 × 28 × 38 cm · 全部用料：6 木条 + 1 板 + 20 螺丝</text>
 
   <!--
-    Isometric projection with scale 6 px/cm
+    Isometric projection (cabinet), scale 6 px/cm
     scene (x, y, z) → svg (200 + 6*x + 5.196*y, 600 - 6*z - 3*y)
-    Scene dims: bench width 44 (x), depth 28 (y), height 38 (z)
-    Parts:
-      Legs (4): 4 × 3 × 35 at the 4 corners
-      Aprons (4): height 3 cm at top of legs
-      Seat board: 44 × 28 × 1 at top
+    Scene dims: x=0..44 (long), y=0..28 (depth), z=0..38 (height)
+    Parts (all cross-sections 4 wide × 3 deep):
+      Legs (4): 37 cm tall at 4 corners
+      Aprons (4): z = 34..37, just under board
+      Stretchers J/K (2): z = 12..15, between front-back legs on each side (20 cm long)
+      Seat board: 44 × 28 × 1, z = 37..38, sits FLUSH on leg tops
   -->
 
   <!-- Floor shadow -->
   <ellipse cx="430" cy="610" rx="250" ry="20" fill="#000" opacity="0.18"/>
 
-  <!-- ============================================ -->
-  <!-- Back-LEFT leg: scene (0,25,0) to (4,28,35) -->
-  <!-- ============================================ -->
+  <!-- ============ BACK-LEFT leg C: (0,25,0)→(4,28,37) ============ -->
+  <g>
+    <polygon points="353.9,525 369.49,516 369.49,294 353.9,303" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="329.9,525 353.9,525 353.9,303 329.9,303" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="329.9,303 353.9,303 369.49,294 345.49,294" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+  </g>
+
+  <!-- ============ BACK-RIGHT leg D: (40,25,0)→(44,28,37) ============ -->
+  <g>
+    <polygon points="593.9,525 609.49,516 609.49,294 593.9,303" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="569.9,525 593.9,525 593.9,303 569.9,303" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="569.9,303 593.9,303 609.49,294 585.49,294" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+  </g>
+
+  <!-- ============ Right SHORT apron H: (40,4,34)→(44,24,37) ============ -->
+  <!-- Only right face (x=44) and top face (z=37) are visible from front-right iso. -->
   <g>
     <!-- right face -->
-    <polygon points="353.9,525 369.49,516 369.49,306 353.9,315" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
-    <!-- front face -->
-    <polygon points="329.9,525 353.9,525 353.9,315 329.9,315" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
-    <!-- top face (small) -->
-    <polygon points="329.9,315 353.9,315 369.49,306 345.49,306" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="484.78,384 588.7,324 588.7,306 484.78,366" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- top face -->
+    <polygon points="460.78,366 484.78,366 588.7,306 564.7,306" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
   </g>
 
-  <!-- ============================================ -->
-  <!-- Back-RIGHT leg: scene (40,25,0) to (44,28,35) -->
-  <!-- ============================================ -->
+  <!-- ============ Right STRETCHER K: (40,4,12)→(44,24,15) ============ -->
   <g>
-    <polygon points="593.9,525 609.49,516 609.49,306 593.9,315" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
-    <polygon points="569.9,525 593.9,525 593.9,315 569.9,315" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
-    <polygon points="569.9,315 593.9,315 609.49,306 585.49,306" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- right face (x=44), 20 cm long × 3 cm tall -->
+    <polygon points="484.78,516 588.7,456 588.7,438 484.78,498" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- top face (z=15) -->
+    <polygon points="460.78,498 484.78,498 588.7,438 564.7,438" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- front face (y=4), peeks out beside front-right leg -->
+    <polygon points="460.78,516 484.78,516 484.78,498 460.78,498" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
   </g>
 
-  <!-- ============================================ -->
-  <!-- Right apron H: scene (41,4,32) to (44,24,35) -->
-  <!-- Spans between front-right and back-right legs on the right side -->
-  <!-- ============================================ -->
+  <!-- ============ FRONT-LEFT leg A: (0,0,0)→(4,3,37) ============ -->
   <g>
     <!-- right face -->
-    <polygon points="484.78,396 570.7,336 570.7,318 484.78,378" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
-    <!-- front face (small, facing front) -->
-    <polygon points="466.78,396 484.78,396 484.78,378 466.78,378" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
-    <!-- top face -->
-    <polygon points="466.78,378 484.78,378 570.7,318 552.7,318" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
-  </g>
-
-  <!-- ============================================ -->
-  <!-- Front-LEFT leg: scene (0,0,0) to (4,3,35) -->
-  <!-- ============================================ -->
-  <g>
-    <!-- right face -->
-    <polygon points="224,600 239.59,591 239.59,381 224,390" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="224,600 239.59,591 239.59,369 224,378" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
     <!-- front face -->
-    <polygon points="200,600 224,600 224,390 200,390" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="200,600 224,600 224,378 200,378" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
     <!-- top face -->
-    <polygon points="200,390 224,390 239.59,381 215.59,381" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="200,378 224,378 239.59,369 215.59,369" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
   </g>
 
-  <!-- ============================================ -->
-  <!-- Front-RIGHT leg: scene (40,0,0) to (44,3,35) -->
-  <!-- ============================================ -->
+  <!-- ============ FRONT-RIGHT leg B: (40,0,0)→(44,3,37) ============ -->
   <g>
-    <polygon points="464,600 479.59,591 479.59,381 464,390" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
-    <polygon points="440,600 464,600 464,390 440,390" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
-    <polygon points="440,390 464,390 479.59,381 455.59,381" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="464,600 479.59,591 479.59,369 464,378" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="440,600 464,600 464,378 440,378" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <polygon points="440,378 464,378 479.59,369 455.59,369" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
   </g>
 
-  <!-- ============================================ -->
-  <!-- Front apron E: scene (4,0,32) to (40,3,35) -->
-  <!-- ============================================ -->
+  <!-- ============ Front LONG apron E: (4,0,34)→(40,3,37) ============ -->
   <g>
-    <!-- right face (visible at right end) -->
-    <polygon points="440,408 455.59,399 455.59,381 440,390" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
-    <!-- front face -->
-    <polygon points="224,408 440,408 440,390 224,390" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
-    <!-- top face -->
-    <polygon points="224,390 440,390 455.59,381 239.59,381" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- right face (x=40) -->
+    <polygon points="440,396 455.59,387 455.59,369 440,378" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- front face (y=0) -->
+    <polygon points="224,396 440,396 440,378 224,378" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.5"/>
+    <!-- top face (z=37) -->
+    <polygon points="224,378 440,378 455.59,369 239.59,369" fill="url(#wd_top)" stroke="#5a3c20" stroke-width="0.5"/>
   </g>
 
-  <!-- ============================================ -->
-  <!-- Seat board: scene (0,0,37) to (44,28,38) -->
-  <!-- ============================================ -->
+  <!-- ============ Seat board I: (0,0,37)→(44,28,38), FLUSH on leg tops ============ -->
   <g>
-    <!-- right face (1 cm thick, projected) -->
+    <!-- right face (x=44, 1 cm thick) -->
     <polygon points="464,378 609.49,294 609.49,288 464,372" fill="url(#wd_side)" stroke="#5a3c20" stroke-width="0.6"/>
-    <!-- front face (1 cm thick) -->
+    <!-- front face (y=0, 1 cm thick) -->
     <polygon points="200,378 464,378 464,372 200,372" fill="url(#wd_front)" stroke="#5a3c20" stroke-width="0.6"/>
-    <!-- top face with grain pattern -->
+    <!-- top face (z=38) with grain -->
     <polygon points="200,372 464,372 609.49,288 345.49,288" fill="url(#grain_top)" stroke="#5a3c20" stroke-width="1"/>
-    <!-- subtle highlight on top -->
+    <!-- subtle highlight -->
     <polygon points="240,360 380,316 410,323 270,367" fill="#fff" opacity="0.1"/>
   </g>
 
@@ -135,24 +127,39 @@
     <text x="0" y="52" text-anchor="middle" font-size="14" font-weight="bold" fill="#a87042">完成 ✓</text>
   </g>
 
-  <!-- Dimension callouts: height -->
+  <!-- Dimension callouts -->
   <g font-size="11" fill="#5a3c20">
+    <!-- height 38 -->
     <line x1="655" y1="288" x2="655" y2="600" stroke="#5a3c20" stroke-width="0.5"/>
     <line x1="650" y1="288" x2="660" y2="288" stroke="#5a3c20" stroke-width="0.5"/>
     <line x1="650" y1="600" x2="660" y2="600" stroke="#5a3c20" stroke-width="0.5"/>
     <text x="665" y="448">高 38</text>
 
-    <!-- Width along front -->
+    <!-- width 44 along front -->
     <line x1="200" y1="620" x2="464" y2="620" stroke="#5a3c20" stroke-width="0.5"/>
     <line x1="200" y1="615" x2="200" y2="625" stroke="#5a3c20" stroke-width="0.5"/>
     <line x1="464" y1="615" x2="464" y2="625" stroke="#5a3c20" stroke-width="0.5"/>
     <text x="332" y="635" text-anchor="middle">长 44</text>
 
-    <!-- Depth along right -->
+    <!-- depth 28 along right -->
     <line x1="475" y1="608" x2="620" y2="524" stroke="#5a3c20" stroke-width="0.5"/>
     <line x1="471" y1="612" x2="479" y2="604" stroke="#5a3c20" stroke-width="0.5"/>
     <line x1="616" y1="528" x2="624" y2="520" stroke="#5a3c20" stroke-width="0.5"/>
     <text x="560" y="585" font-size="11" fill="#5a3c20">宽 28</text>
+  </g>
+
+  <!-- Annotation: stretcher K + symmetric J -->
+  <g font-size="11" fill="#3c2a18">
+    <line x1="700" y1="475" x2="555" y2="475" stroke="#c4392e" stroke-width="0.7"/>
+    <text x="705" y="470" fill="#c4392e">侧横档 K</text>
+    <text x="705" y="485" font-size="10" fill="#7a5a38">（左侧对称有 J）</text>
+    <text x="705" y="500" font-size="10" fill="#7a5a38">距地 12 cm，加固</text>
+  </g>
+
+  <!-- Annotation: board flush with legs -->
+  <g font-size="10" fill="#2c6caf">
+    <line x1="135" y1="358" x2="195" y2="372" stroke="#2c6caf" stroke-width="0.6"/>
+    <text x="40" y="356">凳面与腿顶齐平</text>
   </g>
 
   <!-- Bottom checklist -->
