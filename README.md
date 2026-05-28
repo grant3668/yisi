@@ -4,6 +4,8 @@
 
 **最终成品**：44 cm × 28 cm × 38 cm 的四腿小板凳（带侧横档加固）
 
+🌐 **在线预览**：<https://yisi.happyboyyy.workers.dev>
+
 ---
 
 ## 目录
